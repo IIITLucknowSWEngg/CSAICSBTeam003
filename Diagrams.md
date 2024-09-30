@@ -6,7 +6,6 @@
 
 This diagram shows how users interact with the system.
 
-```plantuml
 @startuml
 actor User as U
 actor Recruiter as R
@@ -24,6 +23,7 @@ R -> (Search for Candidates)
 A -> (Manage Users)
 A -> (Manage Jobs)
 @enduml
+
 
 ![Diagram](https://www.plantuml.com/plantuml/png/JT31oi8m3C3nUvyYn-yx-0goifiWZ4cznpRJmfREDaDyUxkj5O_xXVp3sYJ1ACiqAhGI8fX44J21ATyzsRXusR4lgDtaUGMjb8734VxQI2W4NGo37-c_g9xdyGr3tZY5Mwfw8NRG1cQouWFd4y-5ajHn5vA0cLtkvHNLVt6F5BXwUi7QznPPAkSsHllOJhR8pjUAtgPdPBpJzeyPVwsq6sANt-83 "PlantUML Diagram")
 
