@@ -64,7 +64,7 @@ Recruiter "1" -- "0..*" Job : posts
 @enduml
 
 
-![Diagram](//www.plantuml.com/plantuml/png/TP1FImCn4CNl-od2dln3Yrv5f21u417PuWT8awaCJZ8nCq6A-DrjrY1PeQTXNZBlztWRKPkr11eSMH7pAf3Drs3CvLOpnZSJRO1kXM2HkZrPaK_Elaeb4Li_WPG0P-TL4OZ-dcC4fyXnWey2eiUdxw7XNZBlaM11t27NxGb5RxVlI7Hdf0xvPNYhqCvwfqVUBLmKbVhW7iHbJ3L7LMrAT7ZWV3phNIPmkQ3-wy1nI3OUdbiLYKN_xkR2nklHh5RpQD6M-jLwVJ7E4MzC9IE8sNCU6kx4pygHOGFHbq0_)
+![Diagram](https://www.plantuml.com/plantuml/png/TP1FImCn4CNl-od2dln3Yrv5f21u417PuWT8awaCJZ8nCq6A-DrjrY1PeQTXNZBlztWRKPkr11eSMH7pAf3Drs3CvLOpnZSJRO1kXM2HkZrPaK_Elaeb4Li_WPG0P-TL4OZ-dcC4fyXnWey2eiUdxw7XNZBlaM11t27NxGb5RxVlI7Hdf0xvPNYhqCvwfqVUBLmKbVhW7iHbJ3L7LMrAT7ZWV3phNIPmkQ3-wy1nI3OUdbiLYKN_xkR2nklHh5RpQD6M-jLwVJ7E4MzC9IE8sNCU6kx4pygHOGFHbq0_)
 
 
 ## 3. Sequence Diagram
@@ -87,7 +87,7 @@ J -> User: Confirm Application Status
 @enduml
 
 
-![Diagram](//www.plantuml.com/plantuml/png/POqzJWGn34PxdyBQdWjCWPQVQWeq2eBU18zaAHD7ZiDgRyzw1n28zZs_pyVkP3ws0fHT3Lyw6pGobooDgkDXrZTSr9pA0QdZlFpJE_-B4sSRucnNcG1Y66zkB_s4zwQdpdX9EypBbKxuAdmAX8_i9AL_5-7kMYjdNDNY0EQWQS8dTLdF-FCA87tT9_w8jSWaaulMFOh92H-qhcBRRutFJZuw7Bc-Zwry0W00)
+![Diagram](https://www.plantuml.com/plantuml/png/POqzJWGn34PxdyBQdWjCWPQVQWeq2eBU18zaAHD7ZiDgRyzw1n28zZs_pyVkP3ws0fHT3Lyw6pGobooDgkDXrZTSr9pA0QdZlFpJE_-B4sSRucnNcG1Y66zkB_s4zwQdpdX9EypBbKxuAdmAX8_i9AL_5-7kMYjdNDNY0EQWQS8dTLdF-FCA87tT9_w8jSWaaulMFOh92H-qhcBRRutFJZuw7Bc-Zwry0W00)
 
 ## 4. Activity Diagram
 
@@ -114,7 +114,7 @@ endif
 stop
 @enduml
 
-![Diagram](//www.plantuml.com/plantuml/png/RP1BRiCm34JtF0MHbNE5UD7a2YsAhWLfN0jGILTaKEJszSSkX28RGIHdD4-yceVgzwz2wuKkxuRAHJ-Di_HxQGWrZZ0Uj79K4KJFsembMTFdYkyxp7kYF72tQaAf2Ebng91UpkmZXBi7x4pCbxTHV_Xq-wyxzOHYu4vqaq7I4S2YdeSSmqOpJpz2zfMomYOLmz9T85vtHuWHqvFusNjBYLsRVzXYRiF_A8_N4cB9ia8oGr8UQ3l9N2UwpiMysby0)
+![Diagram](https://www.plantuml.com/plantuml/png/RP1BRiCm34JtF0MHbNE5UD7a2YsAhWLfN0jGILTaKEJszSSkX28RGIHdD4-yceVgzwz2wuKkxuRAHJ-Di_HxQGWrZZ0Uj79K4KJFsembMTFdYkyxp7kYF72tQaAf2Ebng91UpkmZXBi7x4pCbxTHV_Xq-wyxzOHYu4vqaq7I4S2YdeSSmqOpJpz2zfMomYOLmz9T85vtHuWHqvFusNjBYLsRVzXYRiF_A8_N4cB9ia8oGr8UQ3l9N2UwpiMysby0)
 
 
 ## 4. Architecture Diagram
@@ -144,6 +144,6 @@ node "Database" {
 [Application Server] --> [Job Listings]
 @enduml
 
-![Diagram](//www.plantuml.com/plantuml/png/VP2_2i8m4CRtFCNHlQyWzSyaEeauI8V47d8Gat9twY2-kst9S4LnlE_xVkH76b7FUhz5btA7KAqZOT8ANWxWVC80AyvFGMx7Uvy3HOHbtxVkxGfnG7uW6s8C2Z0i8rsyKaubDk36gmzUiA17GOOncyXj3h0ZKKfNcPYP3DJrOlwOTVjkpL7QNsOsj6lhzcSqLsumTSEtVW00)
+![Diagram](https://www.plantuml.com/plantuml/png/VP2_2i8m4CRtFCNHlQyWzSyaEeauI8V47d8Gat9twY2-kst9S4LnlE_xVkH76b7FUhz5btA7KAqZOT8ANWxWVC80AyvFGMx7Uvy3HOHbtxVkxGfnG7uW6s8C2Z0i8rsyKaubDk36gmzUiA17GOOncyXj3h0ZKKfNcPYP3DJrOlwOTVjkpL7QNsOsj6lhzcSqLsumTSEtVW00)
 
 
