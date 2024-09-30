@@ -66,3 +66,57 @@ Scalability is essential, as the platform should handle millions of user profile
 Users will have stable internet connections for optimal performance.
 Third-party APIs and services for authentication and payments will be available.
 Content will comply with copyright and DMCA regulations.
+
+
+# Functional Requirements 
+
+## 3.1 User Registration and Authentication
+- **FR-1**: Users can register via email or through third-party services like Google, Facebook, or LinkedIn.
+- **FR-2**: Users can log in and out, recover passwords, and manage profile settings.
+- **FR-3**: Two-factor authentication (2FA) is available for account security.
+- **FR-4**: Users can deactivate or delete their accounts.
+
+## 3.2 Profile Management
+- **FR-5**: Users can update their profiles, including personal information, experience, education, certifications, and skills.
+- **FR-6**: Profile visibility settings allow users to make profiles public, private, or visible only to connections.
+
+## 3.3 Job Listings and Application
+- **FR-7**: Companies can create, edit, and delete job postings, including detailed descriptions and skill requirements.
+- **FR-8**: Users can apply for jobs, attaching their resumes and cover letters.
+- **FR-9**: Recruiters can manage and filter applicants based on skills, location, and experience.
+
+## 3.4 Networking and Endorsements
+- **FR-10**: Users can send, accept, and reject connection requests.
+- **FR-11**: Users can endorse the skills of their connections.
+- **FR-12**: The platform will suggest new connections based on the user’s industry and interests.
+
+## 3.5 Messaging
+- **FR-13**: Users can send direct messages to their connections, with options to attach documents or links.
+- **FR-14**: Real-time notifications alert users to new messages.
+
+## 3.6 Admin Panel
+- **FR-15**: Admins can manage user roles, view reports on platform activity, and moderate content.
+- **FR-16**: Admins can ban users or remove inappropriate content flagged by the community.
+
+# Non-Functional Requirements
+
+## 4.1 Performance Requirements
+- **NFR-1**: The system should support up to 500,000 concurrent users.
+- **NFR-2**: Job postings and search results should load within 1 second under standard conditions.
+
+## 4.2 Security Requirements
+- **NFR-3**: All personal data must be encrypted in storage and during transmission.
+- **NFR-4**: User sessions must expire after a period of inactivity for security purposes.
+
+## 4.3 Usability Requirements
+- **NFR-5**: The platform’s user interface must be intuitive, with clear navigation and accessible on mobile and desktop devices.
+- **NFR-6**: The system should support multiple languages for global users.
+
+## 4.4 Scalability Requirements
+- **NFR-7**: The platform should scale to handle millions of users without performance degradation.
+- **NFR-8**: The platform must integrate with a CDN to handle global content delivery efficiently.
+
+## 4.5 Regulatory and Compliance Requirements
+- **NFR-9**: The platform must comply with GDPR, ensuring user data privacy and the right to be forgotten.
+- **NFR-10**: Content posted on the platform must be moderated to ensure compliance with DMCA for copyright protection.
+
