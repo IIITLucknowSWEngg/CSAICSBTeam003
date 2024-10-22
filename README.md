@@ -15,6 +15,6 @@ Team Name: ProConnect
 | Diva Goyal          | CSAI     | LCI2023014  | lci2023014@iiitl.ac.in    | diva-goyal           |
 | Nakshatra Patil     | CSAI     | LCI2023042  | lci2023042@iiitl.ac.in    | Nakshatra-Patil      |
 | Anjali Meena        | CSB      | LCB2023042  | lcb2023042@iiitl.ac.in    | anjalimeena19        |
-| Raj Rakshit Shukla  | CSB      | LCB2023017  | lcb2023017@iiitl.ac.in    | rakshit-shukla       |
+| Raj Rakshit Shukla  | CSB      | LCB2023017  | lcb2023017@iiitl.ac.in    | datmedevil17       |
 
 
