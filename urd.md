@@ -1,4 +1,3 @@
-Here is the **User Requirements Document (URD)** for a **LinkedIn Clone**:
 
 ---
 
