@@ -1,0 +1,19 @@
+@startuml Context
+!define C4Context
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+Person(customer, "User", "A person who uses LinkedIn to manage their professional profile, connect, and find jobs.")
+System(system, "LinkedIn Clone", "The main application for professional networking.")
+System_Ext(auth_system, "Authentication Service", "Handles user authentication and authorization.")
+System_Ext(mail_system, "Email Service", "Sends email notifications to users.")
+System_Ext(payment_gateway, "Payment Gateway", "Handles premium subscriptions and transactions.")
+System_Ext(job_portal, "Job Portals API", "External API to fetch and display job listings.")
+
+Rel(customer, system, "Uses")
+Rel(system, auth_system, "Authenticates")
+Rel(system, mail_system, "Sends email notifications")
+Rel(system, payment_gateway, "Processes premium subscriptions")
+Rel(system, job_portal, "Fetches job listings")
+
+SHOW_LEGEND()
+@enduml
