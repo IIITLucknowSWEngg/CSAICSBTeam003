@@ -4,6 +4,8 @@ The component diagram illustrates the key components and their interactions in t
 
 ---
 
+
+---
 ## Description
 
 ### 1. **User Interface (UI)**:
