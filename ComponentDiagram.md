@@ -4,6 +4,8 @@ The component diagram illustrates the key components and their interactions in t
 
 ---
 
+![System Context Diagram](https://www.plantuml.com/plantuml/png/RPF1RgCm48RlFCMezuexXrNRj9LORNUpGUnzWYTW1Up87XBbxTS6x1gKcptpOSt_QNYnZ8R7eSyQFLoq8iNmL5ioK2ecSyA6dW0jr6KAl8xSkODiaALMK96voWNqhHJT6tsIFS4NAcnfSBK9Myef-PlufiqPTbefQlp3TaANUef-aRNOIjL2TRTCmyJ5Oah-r4Ue24tJ0Ie11tAzWPIO1_zGZf_dTk1yIxzsex0_V1A9ROAbvrkh59hboOb9vayhAVg6pPcKW7TaFA8bJyVBIlU-d9_oXoohItX-_Z6PXW9-QJTrNibMZPVG2j8B-2Vfbdy8oQ5c0nDq5qkmr7jWeb97xJhaV2vG1A8r1toh3jr4aUk_6Nsp1FuMW9MQPLfuxScmY-dpUIegyG3sKY2xOGq9lu7OsooatR0LQqFvWTX8kX9CI-tRMKYUyeyrnFmFtuPe8shOSdz7CdTlncQ9Z2trITnqmLQsal8OJP5a8TnsG37_kBWayBNj6xj3_Gv_BWwQcHTIOXpw_m00)
+
 
 ---
 ## Description
@@ -107,10 +109,8 @@ The component diagram illustrates the key components and their interactions in t
 
 ---
 
-This component diagram reflects a scalable and modular architecture, ensuring smooth operations and an excellent user experience for a LinkedIn-like platform.
 
-
-## PlantUML Diagram
+## Code
 
 ```plantuml
 @startuml
@@ -144,6 +144,8 @@ Notifications --> Database : Fetch Notifications
 UI --> APIs : Interactions
 APIs --> Database : CRUD Operations
 @enduml
+
+
 
 
 
