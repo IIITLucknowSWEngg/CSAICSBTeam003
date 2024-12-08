@@ -2,6 +2,8 @@
 
 This document describes the container-level architecture of a LinkedIn clone. The system consists of multiple containers, each serving specific roles, to deliver functionality similar to LinkedIn's core features.
 
+![Container Diagram](https://www.plantuml.com/plantuml/png/XLDDJnin4BtlhvY60oVKKoyeYWXBWf3uG8IA0wegPpsRMEpQMzk1fXN_lUDPR-COMd98uZVllPcTVJvnNbY_QPlYayHQQOIxMNa_lJw_d7qlRovlxk2WB6TVvlEYE8HxvHi4KuDV8qWbLbQqXMUmDDeBabiuwt6eZOLBfPzGNcWe6wEHB8ZNTlHNUmTAiu_REezjuPwKxaGGBaNrjB9cesLf6Z8vcFCdOLI3oS9lgRV5oWkzQd17sM6dcLlsUEzAZ9LeU_ffG_em-5U7baRsQ4NbbLx1Y_Bhz0489ZxJX8DD-1sFmt4o0LuUKLkXTEJ3CimaxBRGHYACzbS52oQDu7S1zE6lGvXReprgoSV71rp2jEiQLGclZFuMshuGDXvdbJ00AwxCKZNuHjGoJBfTVJ99-uOTnhQxBS4emiEGt69wUm7dmkEBsBAtw5GyadzI76RAB1TedrM5BlLatrjhwZ1R9B1trsCH8l_uB_LcyHnHxYbh0ZwMKQOrLc5DU-BgB_oEnRx35JedLY4jgK4xeFyTuRNWx_Gzd0albi8X7sKym8WpDzH6G_hEGX8Y6erJ4Uya5V5IteXYvzbFZrQB9kRIzNcwNoihZpfX_HQc6xy6UalFIgBjNpqX0q2kcKLSrUEryQhcD6PhraaXuk-wl8RBTOSD4zrQTQxWotTqDE7hS1pkP8B5j4UO68mcEJqcjnyRTDuLaVjlGe8IAKia4UV6yiiOAhaY9Z6bTsYTqQ9Hlr1oEPVa-Klx9CMyLHwxA8imJPODJvAO8tvW8Ttd1wiy4TEPXsVucFLsD-YhDRf-RgLham-S1YWE6o3KFiOY5sIHYNqMgEL-d5nnGjYcRVu0)
+
 ## System Overview
 The LinkedIn clone provides a social networking platform where users can:
 - Create and manage profiles.
@@ -97,3 +99,69 @@ The LinkedIn clone provides a social networking platform where users can:
   - Enables fast and efficient user and job searches.
   - Provides personalized recommendations for connections, jobs, and posts.
 
+# PlantUML Diagram for LinkedIn Clone
+
+
+```plantuml
+@startuml
+!define RECTANGLE #LightBlue
+
+title LinkedIn Clone - Container Diagram
+
+skinparam backgroundColor #F9F9F9
+skinparam style strictuml
+skinparam componentStyle rectangle
+
+actor User
+User --> WebApp : Interacts with
+User --> MobileApp : Interacts with
+
+package "Frontend" {
+    rectangle WebApp <<RECTANGLE>> {
+        React.js / TypeScript
+    }
+    rectangle MobileApp <<RECTANGLE>> {
+        Flutter / React Native
+    }
+}
+
+package "Backend" {
+    rectangle BackendAPI <<RECTANGLE>> {
+        Node.js / Django / Spring Boot
+    }
+    rectangle "Authentication Service" <<RECTANGLE>> {
+        OAuth 2.0 / JWT
+    }
+    rectangle "Search & Recommendation Engine" <<RECTANGLE>> {
+        Elasticsearch / Solr
+    }
+}
+
+package "Infrastructure" {
+    database Database <<RECTANGLE>> {
+        PostgreSQL / MongoDB
+    }
+    queue "Message Queue" <<RECTANGLE>> {
+        RabbitMQ / Kafka
+    }
+    cloud "File Storage" <<RECTANGLE>> {
+        AWS S3 / Azure Blob
+    }
+    component "Notification Service" <<RECTANGLE>> {
+        FCM
+    }
+}
+
+User --> WebApp
+User --> MobileApp
+WebApp --> BackendAPI : API Requests
+MobileApp --> BackendAPI : API Requests
+BackendAPI --> Database : CRUD Operations
+BackendAPI --> "Authentication Service" : Auth & Token Validation
+BackendAPI --> "Search & Recommendation Engine" : Queries & Recommendations
+BackendAPI --> "Message Queue" : Asynchronous Events
+"Message Queue" --> "Notification Service" : Process Notifications
+BackendAPI --> "File Storage" : Upload/Download Multimedia
+"Search & Recommendation Engine" --> Database : Indexing & Queries
+
+@enduml
