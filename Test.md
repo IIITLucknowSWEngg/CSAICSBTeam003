@@ -434,58 +434,7 @@ describe('User Comment on a Post', function() {
   });
 });
 ```
----
-## Test Case 8: User - Like a Post
 
-### Scenario: User likes a post
-
-**Test Steps:**
-1. Open the LinkedIn Clone application.
-2. Log in with valid credentials (email and password).
-3. Navigate to the homepage or the "Feed" section.
-4. Find a post in the feed that you want to like.
-5. Click on the "Like" button below the post.
-6. Verify that the "Like" count on the post increases by 1.
-7. Verify that the post is now marked as "Liked" by the user (e.g., change in the "Like" button appearance).
-8. If the user clicks "Like" again (unlike the post), verify that the "Like" count decreases by 1 and the "Like" button returns to its original state.
-
-**Expected Result:**
-- The user should be able to like a post successfully.
-- The "Like" count on the post should increase by 1.
-- The "Like" button should change to indicate the post has been liked.
-- If clicked again, the "Like" count should decrease by 1, and the button should return to its original state.
-
-### Test Code Example:
-
-```javascript
-describe('User Like a Post', function() {
-  it('should allow the user to like a post successfully', function() {
-    loginPage.open();  // Step 1: Open the login page
-    loginPage.enterCredentials('john.doe@example.com', 'password123');  // Step 2: Enter valid credentials
-    loginPage.submitLogin();  // Step 3: Submit the login form
-
-    homePage.open();  // Step 4: Navigate to the homepage or feed
-
-    const post = homePage.getFirstPost();  // Step 5: Find a post to like
-    const initialLikeCount = post.getLikeCount();  // Store initial like count
-
-    post.clickLikeButton();  // Step 6: Click on the "Like" button
-
-    // Step 7: Verify that the like count has increased by 1
-    expect(post.getLikeCount()).to.equal(initialLikeCount + 1);
-
-    // Step 8: Verify that the "Like" button has changed (indicating the post is liked)
-    expect(post.isLikedByUser()).to.equal(true);
-
-    // Unlike the post (Step 8)
-    post.clickLikeButton();  // Step 8: Click the "Like" button again to unlike
-
-    // Verify that the like count decreases by 1 and the button returns to its original state
-    expect(post.getLikeCount()).to.equal(initialLikeCount);
-    expect(post.isLikedByUser()).to.equal(false);
-  });
-});
-```
 ---
 
 ## Test Deliverables for LinkedIn Clone
