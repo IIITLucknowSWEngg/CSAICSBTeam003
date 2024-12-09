@@ -1,145 +1,147 @@
-
----
-
 # User Requirements Document (URD) for LinkedIn Clone
 
 ## 1. Introduction  
-This document outlines the requirements for a LinkedIn clone, a professional networking platform that allows users to create profiles, connect with other professionals, share updates, apply for jobs, and engage with industry-related content.
+This document outlines the requirements for a LinkedIn clone, a professional networking platform that allows **job seekers**, **recruiters**, **employers**, and **companies** to create profiles, connect with professionals, share updates, apply for jobs, and engage with industry-related content.
 
 ## 2. Purpose  
-The purpose of this URD is to define the core functionalities and features required to build a LinkedIn clone, ensuring the platform provides a user-friendly experience for professionals, recruiters, and companies.
+The purpose of this URD is to define the core functionalities and features required to build a LinkedIn clone, ensuring the platform provides a user-friendly experience for **job seekers**, **recruiters**, **employers**, and **companies**.
 
-## 3. User Types
+---
 
-### 3.1. Basic User (Job Seekers/Professionals)  
-- **Description**: Users looking to create a professional profile, connect with others, and find job opportunities.  
+## 3. User Types  
+
+### 3.1. Job Seekers (Professionals)  
+- **Description**: Individuals looking to create a professional profile, connect with others, and find job opportunities.  
 - **Main Tasks**:  
   - Create and manage a professional profile.
-  - Search for and connect with other users.
-  - Post updates and share professional content.
+  - Search for and connect with other professionals.
+  - Post updates and share industry-related content.
   - Like, comment on, and share posts.
   - Apply for job listings.
 
-### 3.2. Recruiter  
-- **Description**: Users responsible for recruiting professionals for job opportunities within their company.  
+### 3.2. Recruiters  
+- **Description**: Individuals responsible for recruiting professionals for job opportunities within their organization.  
 - **Main Tasks**:  
   - Create and manage a recruiter profile.
   - Post job openings.
   - Search for candidates by skills, experience, and education.
   - Review and manage job applications.
-  
-### 3.3. Company (Employer)  
-- **Description**: Businesses or companies looking to promote job listings and build a professional presence.  
+
+### 3.3. Employers (Companies)  
+- **Description**: Businesses or organizations looking to promote job listings and build a professional presence.  
 - **Main Tasks**:  
   - Create and manage a company page.
-  - Post and promote job listings.
+  - Post and promote job openings.
   - Engage with followers through updates and posts.
   - View and manage job applications.
 
-### 3.4. Administrator  
-- **Description**: Users who manage the platform, ensuring content and profiles comply with the guidelines.  
+### 3.4. Administrators  
+- **Description**: Individuals managing the platform to ensure compliance with guidelines and smooth operations.  
 - **Main Tasks**:  
-  - Monitor and moderate user-generated content (posts, comments).
-  - Manage user accounts (suspend, deactivate).
-  - Review reports of inappropriate content.
+  - Monitor and moderate content, including posts and comments.
+  - Manage accounts of **job seekers**, **recruiters**, and **employers** (e.g., suspend, deactivate accounts).
+  - Handle reports of inappropriate or non-compliant content.
 
 ---
-## 4. Functional Requirements
 
-### 4.1. User Registration and Authentication  
-*Description*: Users must be able to create an account using an email address or third-party authentication (Google, Facebook).  
-*Requirements*:  
-- Users can register and log in using an email/password or social media accounts.
-- Users must verify their email addresses to activate the account.
-- Password reset functionality.
-- Optional two-factor authentication (2FA).
+## 4. Functional Requirements  
+
+### 4.1. Registration and Authentication  
+**Description**: Enables **job seekers**, **recruiters**, and **employers** to create an account using email or third-party authentication.  
+**Requirements**:  
+- Accounts can be created with an email/password or social media accounts (e.g., Google, Facebook).  
+- Email verification is required to activate accounts.  
+- Password reset functionality.  
+- Optional two-factor authentication (2FA).  
 
 ### 4.2. Profile Management  
-*Description*: Users can create and edit professional profiles, including their work experience, skills, and education.  
-*Requirements*:  
-- Profile fields include: name, profile picture, headline, summary, experience, education, skills, certifications, and contact information.
-- Users can set visibility preferences (public, private, or connections-only).
-- Ability to endorse others for specific skills.
-- Recommendations section for users to leave feedback on others’ profiles.
+**Description**: **Job seekers**, **recruiters**, and **employers** can create and manage profiles with details relevant to their roles.  
+**Requirements**:  
+- Profiles can include:  
+  - For **job seekers**: Name, profile picture, headline, summary, experience, education, skills, certifications, and contact details.  
+  - For **recruiters**: Name, role, and recruiter-specific details.  
+  - For **employers**: Company name, logo, description, industry, and contact information.  
+- Visibility settings: public, private, or connections-only.  
+- Skills endorsement and recommendation sections.  
 
 ### 4.3. Connections and Networking  
-*Description*: Users can connect with other professionals to expand their network.  
-*Requirements*:  
-- Send and receive connection requests.
-- Option to follow professionals without connecting.
-- Connection suggestions based on mutual contacts, industry, or shared experiences.
-- Users can accept or decline connection requests.
+**Description**: **Job seekers**, **recruiters**, and **employers** can establish professional connections and grow their network.  
+**Requirements**:  
+- Ability to send and receive connection requests.  
+- Option to follow professionals or companies without connecting.  
+- Suggestions for connections based on mutual contacts, industry, or shared experiences.  
+- **Job seekers** and **recruiters** can accept or decline connection requests.  
 
 ### 4.4. Feed and Posts  
-*Description*: Users can post updates, share content, and interact with the posts of others on their newsfeed.  
-*Requirements*:  
-- Ability to create posts with text, images, or links.
-- Like, comment on, and share posts.
-- Control over post visibility (public, only connections, or private).
-- Personalized feed showing updates from connections and followed profiles.
+**Description**: **Job seekers**, **recruiters**, and **employers** can share updates and interact with posts.  
+**Requirements**:  
+- Ability to create posts with text, images, or links.  
+- Interact with posts: like, comment, and share.  
+- Post visibility control: public, connections-only, or private.  
+- Personalized feed displaying updates from connections, followed profiles, and companies.  
+
 ### 4.5. Job Listings and Applications  
-*Description*: Users can search for jobs and recruiters can post job listings.  
-*Requirements*:  
-- Users can search for jobs using filters (title, location, company, etc.).
-- Apply for jobs directly using a LinkedIn profile or by uploading a resume.
-- Recruiters can post and manage job listings.
-- Job alerts based on user preferences and search history.
+**Description**: **Job seekers** can search for jobs, and **recruiters** can post job openings.  
+**Requirements**:  
+- Search functionality with filters (job title, location, company, etc.).  
+- **Job seekers** can apply using their profile or upload a resume.  
+- **Recruiters** can post and manage job listings.  
+- Job alerts tailored to preferences and search history.  
 
 ### 4.6. Messaging and Communication  
-*Description*: Users can communicate with connections via direct messages.  
-*Requirements*:  
-- Real-time messaging functionality for one-on-one conversations.
-- Group messaging for professional discussions.
-- Notifications for new messages.
-- Ability to send files (documents, images) within messages.
+**Description**: Real-time communication between **job seekers**, **recruiters**, and **employers**.  
+**Requirements**:  
+- One-on-one real-time messaging.  
+- Group discussions for professional topics.  
+- Notifications for new messages.  
+- Ability to share files (documents, images) via messages.  
 
 ### 4.7. Notifications  
-*Description*: Users receive notifications about key actions and updates on the platform.  
-*Requirements*:  
-- Notifications for connection requests, job applications, post interactions (likes, comments), and new messages.
-- In-app and email notifications, with user preferences to enable/disable specific notifications.
+**Description**: Notify **job seekers**, **recruiters**, and **employers** about important updates.  
+**Requirements**:  
+- Notifications for connection requests, job applications, post interactions (likes, comments), and messages.  
+- Customizable preferences for in-app and email notifications.  
 
 ### 4.8. Search Functionality  
-*Description*: Users must be able to search for other users, companies, and jobs.  
-*Requirements*:  
-- Search filters for people (by name, industry, location), jobs (by title, company, location), and companies.
-- Auto-complete suggestions based on keywords.
-- View detailed profiles and company pages from search results.
+**Description**: Enables **job seekers**, **recruiters**, and **employers** to find people, jobs, or companies.  
+**Requirements**:  
+- Search filters for professionals (by name, industry, location), jobs, and companies.  
+- Auto-complete suggestions based on keywords.  
+- View detailed profiles and company pages from search results.  
 
 ---
 
-## 5. Non-Functional Requirements
+## 5. Non-Functional Requirements  
+
 ### 5.1. Scalability  
-- The platform must be able to handle increasing numbers of users, jobs, and connections as it grows.
-- It must support up to 1 million concurrent users.
+- The platform must support up to 1 million concurrent **job seekers**, **recruiters**, and **employers**.  
 
 ### 5.2. Security  
-- All user data, including personal information, must be securely stored using encryption.
-- The platform must comply with data protection regulations like GDPR.
-- Regular security audits to ensure the system is safe from breaches.
+- Data protection using encryption to safeguard sensitive information.  
+- Compliance with regulations like GDPR.  
+- Regular security audits to ensure protection against breaches.  
 
 ### 5.3. Performance  
-- The platform should load quickly (within 2-3 seconds), even during peak usage.
-- Jobs, profiles, and posts should display with minimal delay.
+- The platform should load pages within 2-3 seconds, even during peak times.  
+- Smooth performance for features like job search and messaging.  
 
 ### 5.4. Usability  
-- The platform must have a clean, intuitive interface suitable for users with varying levels of technical expertise.
-- Mobile-responsive design for seamless usage across devices.
-  
+- Simple, intuitive interface catering to **job seekers**, **recruiters**, and **employers** with varying technical expertise.  
+- Mobile-friendly design for seamless usage across devices.  
+
 ### 5.5. Availability  
-- The platform should have a 99.9% uptime, ensuring minimal disruption in service.
-- Backup and recovery processes to restore data in case of failure.
+- The platform should guarantee 99.9% uptime with minimal service disruptions.  
+- Backup and recovery mechanisms to prevent data loss.  
 
 ---
 
 ## 6. Glossary  
-- *Basic User*: A user who creates a profile and connects with others.
-- *Recruiter*: A user who posts jobs and searches for potential candidates.
-- *Company*: A business entity looking to hire and create a professional presence.
-- *Administrator*: A user responsible for managing the platform's content and accounts.
+- **Job Seeker**: A professional looking for networking opportunities and jobs.  
+- **Recruiter**: An individual responsible for finding and hiring candidates for job openings.  
+- **Employer**: A business entity posting jobs and engaging with professionals.  
+- **Administrator**: A platform manager ensuring compliance and smooth operations.  
 
 ---
 
 ## 7. Conclusion  
-This URD defines the functional and non-functional requirements for a LinkedIn clone, ensuring it serves the needs of job seekers, professionals, recruiters, and companies. Regular updates and refinements will be made based on feedback and user needs to keep the platform up-to-date with industry trends.
-
+This URD defines the functional and non-functional requirements for a LinkedIn clone, tailored to the needs of **job seekers**, **recruiters**, **employers**, and **companies**. Regular updates and refinements will ensure the platform remains relevant and aligned with user expectations and industry trends.  
