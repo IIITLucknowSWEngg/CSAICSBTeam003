@@ -1,128 +1,402 @@
-# LinkedIn Clone - Design Document
+# LinkedIn Clone - Design Documentation
 
 ## Table of Contents
-1. [Introduction](#1-introduction)
-2. [System Architecture](#2-system-architecture)
-3. [Database Design](#3-database-design)
-4. [User Interface Design](#4-user-interface-design)
-5. [Technology Stack](#5-technology-stack)
-6. [Security and Privacy](#6-security-and-privacy)
-7. [Performance and Scalability](#7-performance-and-scalability)
-8. [Conclusion](#8-conclusion)
+- [Overview](#overview)
+- [Tech Stack](#tech-stack)
+- [Features](#features)
+- [Architecture](#architecture)
+- [API Design](#api-design)
+- [Database Design](#database-design)
+- [Interface Design](#interface-design)
+- [Challenges & Solutions](#challenges-solutions)
+- [Testing & Validation](#testing-validation)
 
----
+## Overview
+The LinkedIn Clone is a platform that replicates core features of LinkedIn, providing users with a professional network to connect, post updates, and explore job opportunities. It allows users to create a professional profile, interact with others, and explore content, similar to the original LinkedIn platform.
 
-## 1. Introduction
+## Tech Stack
+- **Frontend:**
+  - HTML, CSS, JavaScript (ES6+)
+  - React.js
+  - Redux for state management
+  - Axios for HTTP requests
+  - Bootstrap for styling
+- **Backend:**
+  - Node.js
+  - Express.js
+  - MongoDB (for database)
+- **Authentication:**
+  - JWT (JSON Web Token)
+- **Deployment:**
+  - Heroku for the backend
+  - Netlify for the frontend
 
-This document provides the design details for the **LinkedIn Clone** project, which aims to replicate the core functionalities of LinkedIn, including user profiles, connections, messaging, job postings, and more. The goal of this design is to ensure a scalable, secure, and user-friendly platform that can handle a large number of users and transactions.
+## Features
+- **User Authentication:**
+  - Login and Sign up functionality
+  - JWT-based authentication system
+- **Profile Management:**
+  - Users can create and update their profiles
+  - Add experience, education, skills, etc.
+  - Profile visibility settings (Public/Private)
+- **Feed:**
+  - Post updates (Text, images, videos)
+  - Like and comment on posts
+  - Share posts
+- **Connection System:**
+  - Send connection requests
+  - Accept or reject connection requests
+  - View connections and their activities
+- **Search Functionality:**
+  - Search users by name, skills, or job title
+  - Filter search results based on location, company, etc.
+- **Job Opportunities:**
+  - View job postings
+  - Apply for jobs
+  - Follow companies for job updates
 
----
+## Architecture
 
-## 2. System Architecture
+### Frontend Architecture
 
-### 2.1 Overview
-The LinkedIn Clone platform will follow a **multi-tier architecture** with separate layers for presentation, business logic, and data management. The system will consist of the following main components:
+![System achitecture](/frontend-arch.png)
 
-- **Frontend**: The user interface will be developed for mobile-first, focusing on simplicity and responsiveness.
-- **Backend**: The server-side logic will handle user authentication, job postings, connections, messaging, and notifications.
-- **Database**: A relational database will store user profiles, job listings, posts, messages, and other necessary data.
-- **External Services**: Integrations with third-party services for email notifications, file uploads, etc.
+```plantuml
+@startuml
+!define RECTANGLE class
+!define INTERFACE interface
 
-### 2.2 Architecture Diagram
-The architecture follows a **client-server model**, with the client (mobile app) communicating with the backend through RESTful APIs. External services, such as email and file storage, will interact with the backend to send notifications and store user content.
+' Frontend components with more details
+RECTANGLE Frontend {
+    :User Interface (UI);
+    :Navigation (Tabs, Menus);
+    :State Management (Redux/Context API);
+    :API Communication (REST/GraphQL);
+    :Forms & Validation;
+    :Error Handling;
+    :Notification System;
+    :Authentication (Login, Registration);
+}
 
----
+' Interactions between components
+Frontend --> "User Interface (UI)" : Render Pages
+Frontend --> "Navigation (Tabs, Menus)" : Handle Routing
+Frontend --> "API Communication (REST/GraphQL)" : Fetch User Data
+Frontend --> "API Communication (REST/GraphQL)" : Post Data (Create Profile, Update Info)
+Frontend --> "State Management (Redux/Context API)" : Store Data
+Frontend --> "Forms & Validation" : Validate Inputs
+Frontend --> "Error Handling" : Display Errors
+Frontend --> "Notification System" : Show Alerts
+Frontend --> "Authentication (Login, Registration)" : Manage Login/Logout
+@enduml
+```
 
-## 3. Database Design
+The frontend is built using React.js, following a component-based architecture to ensure reusability and maintainability. The structure includes:
+- **App.js:** Main entry point
+- **Components:** 
+  - `Navbar.js` – Contains the navigation bar.
+  - `Profile.js` – Displays the user’s profile information.
+  - `Feed.js` – Shows the posts from users.
+  - `Post.js` – Individual post component.
+  - `JobBoard.js` – Displays job listings.
+- **Redux Store:** Used to manage global state (user data, posts, etc.).
+- **Routing:** React Router for navigation between pages.
 
-### 3.1 Data Model
-The following are the key entities and relationships in the database:
+### Backend Architecture
 
-- **User**: Stores user details (name, email, password, profile information, etc.).
-- **Profile**: Contains details about the user’s professional background (experience, education, skills).
-- **Connections**: Represents connections between users (one-to-many relationship).
-- **Posts**: Stores user-generated content, including text, images, and videos.
-- **Job Listings**: Contains information about job positions posted by recruiters and companies.
-- **Messages**: Represents direct messaging between users (one-to-one and group messages).
-- **Notifications**: Keeps track of notifications sent to users (connection requests, job alerts, messages).
+![System achitecture](/backend-arch.png)
 
-### 3.2 Entity-Relationship Diagram
-The **ER diagram** will visualize the relationships between users, posts, connections, jobs, and messages, ensuring efficient data retrieval and management.
+```plantuml
+@startuml
+' Define backend components as components
+package "Backend" {
+    [Authentication Service]
+    [User Profile Service]
+    [Job Listing Service]
+    [Messaging Service]
+    [Notification Service]
+    [Job Application Service]
+    [Search Engine]
+    [Data Validation Layer]
+    [Logging & Monitoring]
+}
 
----
+' Define interactions
+User -> [Authentication Service] : Authenticate User
+User -> [Job Application Service] : Apply for Job
+Frontend -> Backend : Fetch User Profile
+Backend -> Database : Store User Data
+Backend -> [Job Listing Service] : Post/Manage Jobs
+Backend -> [Messaging Service] : Send/Receive Messages
+Backend -> [Notification Service] : Notify Users
+Backend -> [Search Engine] : Search Jobs/Profiles
+Backend -> [Logging & Monitoring] : Log Actions
+@enduml
+```
 
-## 4. User Interface Design
+The backend is built using Node.js with Express.js to handle routing and API requests. Key components:
+- **Server.js:** Main entry point for the server.
+- **Routes:**
+  - `authRoutes.js` – Handles user authentication routes (login, signup).
+  - `profileRoutes.js` – Handles profile creation and updates.
+  - `postRoutes.js` – Manages post creation, updating, and deletion.
+  - `jobRoutes.js` – Job listing and application routes.
+- **Controllers:** Business logic for handling requests.
+- **Models:** Defines MongoDB schemas for users, posts, and job applications.
+- **Database:** MongoDB to store user information, posts, and job opportunities.
 
-### 4.1 Overview
-The UI design will focus on simplicity, intuitiveness, and ease of navigation. It will be designed to resemble LinkedIn's core features while maintaining a unique look and feel.
+### Database Design
 
-### 4.2 Key UI Components
-- **Registration/Login Screens**: Allow users to sign up using email or third-party services (Google, Facebook).
-- **Profile Management**: Users can update personal details, experience, education, skills, etc.
-- **News Feed**: Displays posts, job alerts, and activity from connections.
-- **Job Search**: Allows users to search for jobs based on title, location, and skills.
-- **Messaging**: A real-time chat interface for direct communication between users.
-- **Admin Panel**: Provides administrators with tools to manage users, posts, and job listings.
+![System achitecture](/database-design.png)
 
-### 4.3 Wireframes and Mockups
-Wireframes and mockups for key screens will be created to visualize the user experience and interface flow.
+```plantuml
+@startuml
 
----
+' Define database entities with attributes
+entity "User" as user {
+    + user_id : int
+    + name : string
+    + email : string
+    + password_hash : string
+    + profile_picture : string
+    + headline : string
+    + bio : string
+    + location : string
+    + experience : text
+    + education : text
+    + skills : list
+    + job_preference : string
+    + connection_count : int
+    + created_at : datetime
+}
 
-## 5. Technology Stack
+entity "Job" as job {
+    + job_id : int
+    + title : string
+    + description : text
+    + company_name : string
+    + location : string
+    + post_date : datetime
+    + salary_range : string
+    + qualifications_required : string
+    + job_type : string
+    + job_category : string
+    + status : string
+}
 
-### 5.1 Frontend
-- **Mobile App**: React Native for building a cross-platform mobile application for both Android and iOS.
-- **UI Framework**: Material UI for consistent and responsive design components.
+entity "Message" as message {
+    + message_id : int
+    + sender_id : int
+    + receiver_id : int
+    + content : text
+    + timestamp : datetime
+    + read_status : boolean
+}
 
-### 5.2 Backend
-- **Framework**: Node.js with Express for building RESTful APIs.
-- **Database**: PostgreSQL for relational data storage (users, jobs, messages).
-- **Authentication**: JWT (JSON Web Tokens) for secure user authentication.
+entity "Job Application" as job_application {
+    + application_id : int
+    + user_id : int
+    + job_id : int
+    + status : string
+    + applied_at : datetime
+}
 
-### 5.3 External Services
-- **Email Notifications**: SendGrid or Amazon SES for handling email notifications.
-- **File Storage**: Amazon S3 for storing user profile pictures, posts, and attachments.
-- **Push Notifications**: Firebase Cloud Messaging for in-app and push notifications.
+' Define relationships between entities
+user --> job_application : Apply for Jobs
+job --> job_application : Receive Applications
+user --> message : Send Messages
+message --> user : Receive Messages
 
----
+@enduml
+```
 
-## 6. Security and Privacy
+The database is built using MongoDB with the following key collections:
+1. **Users:**
+   - Fields: `username`, `email`, `password`, `profilePic`, `connections`, `skills`, `location`, `education`, `experience`, `visibilitySettings`
+   - Stores information about each user.
+   
+2. **Posts:**
+   - Fields: `userId`, `content`, `media`, `likes`, `comments`, `timestamp`
+   - Stores the posts shared by users.
 
-### 6.1 Authentication
-- **Password Encryption**: Passwords will be encrypted using bcrypt before being stored in the database.
-- **Two-Factor Authentication (Optional)**: Users can enable 2FA for an additional layer of security.
+3. **Connections:**
+   - Fields: `userId`, `connectionId`, `status`
+   - Tracks the relationships between users (pending, accepted, etc.).
 
-### 6.2 Data Privacy
-- **GDPR Compliance**: The platform will adhere to GDPR guidelines for user data protection.
-- **Data Encryption**: All sensitive data (passwords, personal information) will be encrypted both at rest and in transit.
+4. **Jobs:**
+   - Fields: `companyName`, `position`, `location`, `description`, `requirements`, `postedBy`
+   - Stores job listings.
 
-### 6.3 Content Moderation
-- **Admin Control**: Administrators will have the ability to review and delete inappropriate content or suspend user accounts if necessary.
+## API Design
 
----
+### Authentication APIs
+1. **POST /auth/signup**
+   - Input: `username`, `email`, `password`
+   - Output: `JWT token`
+   - Description: Registers a new user and returns a JWT token for authentication.
+   
+2. **POST /auth/login**
+   - Input: `email`, `password`
+   - Output: `JWT token`
+   - Description: Authenticates a user and returns a JWT token for access to protected routes.
 
-## 7. Performance and Scalability
+### Profile APIs
+1. **GET /profile/:userId**
+   - Output: User profile data
+   - Description: Retrieves a user’s profile by ID.
 
-### 7.1 Load Balancing
-- A load balancer will be used to distribute incoming traffic across multiple servers to ensure high availability.
+2. **PUT /profile/:userId**
+   - Input: Updated profile data
+   - Output: Updated profile data
+   - Description: Updates a user's profile information.
 
-### 7.2 Caching
-- **Redis** will be used to cache frequently accessed data (e.g., user profiles, job listings) to improve performance.
+### Post APIs
+1. **POST /post**
+   - Input: `userId`, `content`, `media`
+   - Output: Created post data
+   - Description: Creates a new post.
 
-### 7.3 Database Optimization
-- **Indexes** will be created on frequently queried fields, such as user name, job title, and location, to speed up search operations.
-- **Database Sharding** will be considered for scaling the database as the user base grows.
+2. **GET /posts**
+   - Output: List of posts
+   - Description: Retrieves posts from the feed.
 
-### 7.4 Performance Testing
-- Load testing and stress testing will be performed to ensure the platform can handle up to 1 million concurrent users.
+### Job APIs
+1. **GET /jobs**
+   - Output: List of jobs
+   - Description: Fetches job listings from the database.
 
----
+2. **POST /apply**
+   - Input: `userId`, `jobId`
+   - Output: Confirmation of job application
+   - Description: Allows a user to apply for a job.
 
-## 8. Conclusion
+## Interface Design
 
-This design document outlines the essential architecture, database, UI, and technology stack for building the LinkedIn Clone platform. The design focuses on creating a scalable, secure, and user-friendly platform that will meet the needs of job seekers, recruiters, and businesses. The next steps will involve implementing the design and developing the features according to the requirements specified in the User Requirements Document (URD).
+![System achitecture](/interface-design.png)
+```plantuml
+@startuml
+!define RECTANGLE class
+!define DATABASE database
+' Database entities with more attributes and relationships
+DATABASE User {
+    + user_id : int
+    + name : string
+    + email : string
+    + password_hash : string
+    + profile_picture : string
+    + headline : string
+    + bio : string
+    + location : string
+    + experience : text
+    + education : text
+    + skills : list
+    + job_preference : string
+    + connection_count : int
+    + created_at : datetime
+}
 
----
+DATABASE Job {
+    + job_id : int
+    + title : string
+    + description : text
+    + company_name : string
+    + location : string
+    + post_date : datetime
+    + salary_range : string
+    + qualifications_required : string
+    + job_type : string
+    + job_category : string
+    + status : string
+}
 
-This concludes the **LinkedIn Clone Design Document**.
+DATABASE Message {
+    + message_id : int
+    + sender_id : int
+    + receiver_id : int
+    + content : text
+    + timestamp : datetime
+    + read_status : boolean
+}
+
+DATABASE Job_Application {
+    + application_id : int
+    + user_id : int
+    + job_id : int
+    + status : string
+    + applied_at : datetime
+}
+
+' Relationships between entities
+User --> Job_Application : Apply for Jobs
+Job --> Job_Application : Receive Applications
+User --> Message : Send Messages
+Message --> User : Receive Messages
+@enduml
+```
+
+The interface design follows modern web design principles with a focus on user experience (UX) and accessibility. The design is responsive, ensuring a smooth experience across desktop and mobile devices.
+
+### 1. **Landing Page**
+   - A clean and minimalistic design welcoming new users to sign up or log in.
+   - Prominent call-to-action buttons for **Sign Up** and **Log In**.
+   - Branding with the LinkedIn Clone logo at the top, followed by sections introducing the platform’s features.
+
+### 2. **Navigation Bar**
+   - Includes key options like **Home**, **Profile**, **Feed**, **Search**, **Messages**, and **Jobs**.
+   - **Responsive menu** with dropdowns for easier navigation on smaller screens.
+   - **Search bar** located on top for easy access to user search functionality.
+
+### 3. **Profile Page**
+   - A well-organized user profile with sections like **About**, **Experience**, **Education**, and **Skills**.
+   - Options to **Edit Profile** or **Update Profile Picture**.
+   - **Visibility settings** to allow users to control who can view their information (Public/Private).
+
+### 4. **Feed Section**
+   - The main content area where posts are displayed.
+   - Each post includes options to **Like**, **Comment**, and **Share**.
+   - **Post creation section** at the top for users to add new posts.
+   - A **responsive design** for post interactions across devices.
+
+### 5. **Job Board**
+   - Displays a list of job opportunities with **filters** for job title, location, and company.
+   - Users can **view job details** and apply directly through the platform.
+   - Each job listing will display the **company logo**, **position**, and a **brief description**.
+
+### 6. **Responsive Design**
+   - The layout adjusts seamlessly for different screen sizes, from large desktops to mobile phones.
+   - **Grid-based layout** for easy viewing on desktops and a **vertical layout** for mobile devices.
+   - Accessible buttons, readable text sizes, and mobile-friendly touch interactions for a smooth experience on any device.
+
+### 7. **Notifications & Alerts**
+   - Real-time updates for actions like **new connections**, **job posts**, and **messages**.
+   - Notifications are presented in a **non-intrusive banner** or **modal dialog box**.
+
+## Challenges & Solutions
+
+### Challenge 1: Handling Large Data Volume in Feed
+- **Solution:** Implemented lazy loading and pagination for posts to load data in chunks, reducing initial load time.
+
+### Challenge 2: Real-time Notifications for New Connections and Job Posts
+- **Solution:** Used socket.io for real-time communication to notify users about connection requests and job updates instantly.
+
+### Challenge 3: Securing User Data
+- **Solution:** Implemented JWT authentication for secure login and access control. Sensitive data is hashed using bcrypt before storing in the database.
+
+## Testing & Validation
+
+- **Frontend Testing:** 
+  - Unit tests for individual components using Jest.
+  - Integration tests for overall page functionality.
+  
+- **Backend Testing:** 
+  - API testing using Postman for endpoint validation.
+  - Unit testing for business logic using Mocha/Chai.
+
+- **User Acceptance Testing (UAT):**
+  - A group of target users tested key features to ensure the application meets user needs and expectations.
+
+- **Performance Testing:**
+  - Load testing to handle a large number of concurrent users using tools like JMeter.
+
+## Conclusion
+The LinkedIn Clone aims to offer a similar user experience to the original platform, with the core features implemented using modern technologies. The design follows best practices for scalability, security, and maintainability, ensuring the platform can grow with future needs.
