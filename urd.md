@@ -1,147 +1,169 @@
-# User Requirements Document (URD) for LinkedIn Clone
-
-## 1. Introduction  
-This document outlines the requirements for a LinkedIn clone, a professional networking platform that allows **job seekers**, **recruiters**, **employers**, and **companies** to create profiles, connect with professionals, share updates, apply for jobs, and engage with industry-related content.
-
-## 2. Purpose  
-The purpose of this URD is to define the core functionalities and features required to build a LinkedIn clone, ensuring the platform provides a user-friendly experience for **job seekers**, **recruiters**, **employers**, and **companies**.
+# **User Requirements Document (URD) for LinkedIn Clone**
 
 ---
 
-## 3. User Types  
-
-### 3.1. Job Seekers (Professionals)  
-- **Description**: Individuals looking to create a professional profile, connect with others, and find job opportunities.  
-- **Main Tasks**:  
-  - Create and manage a professional profile.
-  - Search for and connect with other professionals.
-  - Post updates and share industry-related content.
-  - Like, comment on, and share posts.
-  - Apply for job listings.
-
-### 3.2. Recruiters  
-- **Description**: Individuals responsible for recruiting professionals for job opportunities within their organization.  
-- **Main Tasks**:  
-  - Create and manage a recruiter profile.
-  - Post job openings.
-  - Search for candidates by skills, experience, and education.
-  - Review and manage job applications.
-
-### 3.3. Employers (Companies)  
-- **Description**: Businesses or organizations looking to promote job listings and build a professional presence.  
-- **Main Tasks**:  
-  - Create and manage a company page.
-  - Post and promote job openings.
-  - Engage with followers through updates and posts.
-  - View and manage job applications.
-
-### 3.4. Administrators  
-- **Description**: Individuals managing the platform to ensure compliance with guidelines and smooth operations.  
-- **Main Tasks**:  
-  - Monitor and moderate content, including posts and comments.
-  - Manage accounts of **job seekers**, **recruiters**, and **employers** (e.g., suspend, deactivate accounts).
-  - Handle reports of inappropriate or non-compliant content.
+## **Introduction**
+This document captures the insights, challenges, and expectations expressed by stakeholders during interviews for the LinkedIn clone project. Our goal is to develop a professional networking platform that addresses the diverse needs of job seekers, recruiters, employers, and administrators. By incorporating these perspectives, we aim to create a feature-rich and user-friendly experience.
 
 ---
 
-## 4. Functional Requirements  
+## **Stakeholder Insights and Requirements**
 
-### 4.1. Registration and Authentication  
-**Description**: Enables **job seekers**, **recruiters**, and **employers** to create an account using email or third-party authentication.  
-**Requirements**:  
-- Accounts can be created with an email/password or social media accounts (e.g., Google, Facebook).  
-- Email verification is required to activate accounts.  
-- Password reset functionality.  
-- Optional two-factor authentication (2FA).  
+### **1. User Types**
 
-### 4.2. Profile Management  
-**Description**: **Job seekers**, **recruiters**, and **employers** can create and manage profiles with details relevant to their roles.  
-**Requirements**:  
-- Profiles can include:  
-  - For **job seekers**: Name, profile picture, headline, summary, experience, education, skills, certifications, and contact details.  
-  - For **recruiters**: Name, role, and recruiter-specific details.  
-  - For **employers**: Company name, logo, description, industry, and contact information.  
-- Visibility settings: public, private, or connections-only.  
-- Skills endorsement and recommendation sections.  
+#### **Job Seekers (Professionals)**
+**Interview Insights:**  
+- **Recent Graduate A:** “I need a simple way to create a standout profile that showcases my skills and helps me connect with recruiters.”  
+- **Experienced Professional B:** “Applying to jobs should be quick, and I’d like to track the status of my applications easily.”  
 
-### 4.3. Connections and Networking  
-**Description**: **Job seekers**, **recruiters**, and **employers** can establish professional connections and grow their network.  
-**Requirements**:  
-- Ability to send and receive connection requests.  
-- Option to follow professionals or companies without connecting.  
-- Suggestions for connections based on mutual contacts, industry, or shared experiences.  
-- **Job seekers** and **recruiters** can accept or decline connection requests.  
+**Requirements Based on Interviews:**  
+- Comprehensive profile management including education, experience, skills, and certifications.  
+- Job search with advanced filters like location, industry, and salary range.  
+- Direct application features, including uploading resumes and tracking application progress.
 
-### 4.4. Feed and Posts  
-**Description**: **Job seekers**, **recruiters**, and **employers** can share updates and interact with posts.  
-**Requirements**:  
-- Ability to create posts with text, images, or links.  
-- Interact with posts: like, comment, and share.  
-- Post visibility control: public, connections-only, or private.  
-- Personalized feed displaying updates from connections, followed profiles, and companies.  
-
-### 4.5. Job Listings and Applications  
-**Description**: **Job seekers** can search for jobs, and **recruiters** can post job openings.  
-**Requirements**:  
-- Search functionality with filters (job title, location, company, etc.).  
-- **Job seekers** can apply using their profile or upload a resume.  
-- **Recruiters** can post and manage job listings.  
-- Job alerts tailored to preferences and search history.  
-
-### 4.6. Messaging and Communication  
-**Description**: Real-time communication between **job seekers**, **recruiters**, and **employers**.  
-**Requirements**:  
-- One-on-one real-time messaging.  
-- Group discussions for professional topics.  
-- Notifications for new messages.  
-- Ability to share files (documents, images) via messages.  
-
-### 4.7. Notifications  
-**Description**: Notify **job seekers**, **recruiters**, and **employers** about important updates.  
-**Requirements**:  
-- Notifications for connection requests, job applications, post interactions (likes, comments), and messages.  
-- Customizable preferences for in-app and email notifications.  
-
-### 4.8. Search Functionality  
-**Description**: Enables **job seekers**, **recruiters**, and **employers** to find people, jobs, or companies.  
-**Requirements**:  
-- Search filters for professionals (by name, industry, location), jobs, and companies.  
-- Auto-complete suggestions based on keywords.  
-- View detailed profiles and company pages from search results.  
+**Scenario:**  
+A recent graduate builds a detailed profile in minutes, uses the search feature to find relevant entry-level jobs, and applies with a single click.
 
 ---
 
-## 5. Non-Functional Requirements  
+#### **Recruiters**
+**Interview Insights:**  
+- **Recruiter X:** “I want to post job openings quickly and filter candidates based on their qualifications.”  
+- **HR Manager Y:** “Having insights into candidate profiles and application trends is key for hiring the right talent.”  
 
-### 5.1. Scalability  
-- The platform must support up to 1 million concurrent **job seekers**, **recruiters**, and **employers**.  
+**Requirements Based on Interviews:**  
+- Tools to post and manage job listings.  
+- Candidate search with filters for skills, education, and experience.  
+- Insights into application statistics and hiring trends.
 
-### 5.2. Security  
-- Data protection using encryption to safeguard sensitive information.  
-- Compliance with regulations like GDPR.  
-- Regular security audits to ensure protection against breaches.  
-
-### 5.3. Performance  
-- The platform should load pages within 2-3 seconds, even during peak times.  
-- Smooth performance for features like job search and messaging.  
-
-### 5.4. Usability  
-- Simple, intuitive interface catering to **job seekers**, **recruiters**, and **employers** with varying technical expertise.  
-- Mobile-friendly design for seamless usage across devices.  
-
-### 5.5. Availability  
-- The platform should guarantee 99.9% uptime with minimal service disruptions.  
-- Backup and recovery mechanisms to prevent data loss.  
+**Scenario:**  
+A recruiter posts an open position, receives candidate applications, and uses filters to identify top matches based on required skills.
 
 ---
 
-## 6. Glossary  
-- **Job Seeker**: A professional looking for networking opportunities and jobs.  
-- **Recruiter**: An individual responsible for finding and hiring candidates for job openings.  
-- **Employer**: A business entity posting jobs and engaging with professionals.  
-- **Administrator**: A platform manager ensuring compliance and smooth operations.  
+#### **Employers (Companies)**
+**Interview Insights:**  
+- **Small Business Owner C:** “We need a company page to build our brand and attract talent.”  
+- **Corporate HR Manager D:** “Analytics about engagement with our job postings and followers would help us improve recruitment strategies.”  
+
+**Requirements Based on Interviews:**  
+- Customizable company pages with branding elements.  
+- Ability to post and promote job openings.  
+- Engagement analytics for followers and job postings.
+
+**Scenario:**  
+A company creates a page, shares an update about its achievements, and sees increased interest from job seekers who follow the page.
 
 ---
 
-## 7. Conclusion  
-This URD defines the functional and non-functional requirements for a LinkedIn clone, tailored to the needs of **job seekers**, **recruiters**, **employers**, and **companies**. Regular updates and refinements will ensure the platform remains relevant and aligned with user expectations and industry trends.  
+#### **Administrators**
+**Interview Insights:**  
+- **Platform Moderator E:** “Content moderation must balance automation and human review for nuanced cases.”  
+- **Compliance Manager F:** “Managing reports and ensuring compliance with laws is crucial.”  
+
+**Requirements Based on Interviews:**  
+- AI-driven tools to detect and flag inappropriate or non-compliant content.  
+- Dashboards for reviewing reports and managing user accounts.  
+- Tools to ensure compliance with GDPR and other regulations.
+
+**Scenario:**  
+An administrator receives an alert about a flagged post, reviews it with context, and takes appropriate action to resolve the issue.
+
+---
+
+### **2. Functional Features**
+
+#### **Registration and Authentication**
+**Interview Insights:**  
+- **Casual User G:** “I want a seamless registration process with options for social media login.”  
+- **Privacy Advocate H:** “Email verification and two-factor authentication are must-haves for security.”  
+
+**Requirements Based on Interviews:**  
+- Account creation via email or third-party authentication (e.g., Google, Facebook).  
+- Email verification and password reset functionality.  
+- Optional two-factor authentication (2FA).
+
+**Scenario:**  
+A user registers using their Google account, verifies their email, and activates 2FA for added security.
+
+---
+
+#### **Profile Management**
+**Interview Insights:**  
+- **Job Seeker I:** “Endorsements and recommendations from connections would help me stand out.”  
+- **Recruiter J:** “Profiles should have visibility controls for public or private settings.”  
+
+**Requirements Based on Interviews:**  
+- Profiles with detailed sections for skills, experience, and education.  
+- Options for endorsements and recommendations.  
+- Visibility controls: public, private, or connections-only.
+
+**Scenario:**  
+A job seeker updates their profile, requests skill endorsements from colleagues, and sets visibility to connections-only.
+
+---
+
+#### **Networking and Connections**
+**Interview Insights:**  
+- **Professional K:** “Suggested connections based on my industry would save time.”  
+- **Executive L:** “Following companies for updates should be an option without sending connection requests.”  
+
+**Requirements Based on Interviews:**  
+- Send and receive connection requests.  
+- Follow professionals or companies without connecting.  
+- Suggested connections based on shared contacts and interests.
+
+**Scenario:**  
+A professional receives suggestions for connections in their field and follows a company to stay updated on job openings.
+
+---
+
+#### **Job Listings and Applications**
+**Interview Insights:**  
+- **Job Seeker M:** “Receiving alerts for jobs matching my profile would be helpful.”  
+- **Recruiter N:** “I need to manage job postings and track applications effectively.”  
+
+**Requirements Based on Interviews:**  
+- Search functionality with filters like job title, location, and company.  
+- Job alerts tailored to user preferences.  
+- Tools for recruiters to manage and review applications.
+
+**Scenario:**  
+A job seeker sets up alerts for marketing roles and receives notifications about new postings that match their skills.
+
+---
+
+### **3. Non-Functional Requirements**
+
+#### **Scalability and Performance**
+**Interview Insights:**  
+- **Lead Developer O:** “The platform must handle high traffic during peak times without crashing.”  
+
+**Requirements Based on Interviews:**  
+- Infrastructure that supports up to 1 million concurrent users.  
+- Pages load within 2-3 seconds during peak traffic.
+
+---
+
+#### **Security and Compliance**
+**Interview Insights:**  
+- **Legal Advisor P:** “User data must be secure, and the platform must comply with GDPR.”  
+
+**Requirements Based on Interviews:**  
+- Encryption for sensitive data.  
+- Regular security audits and compliance with regulations.
+
+---
+
+#### **Usability**
+**Interview Insights:**  
+- **User Q:** “The interface should be simple enough for non-technical users to navigate.”  
+
+**Requirements Based on Interviews:**  
+- Intuitive interface with clear navigation.  
+- Mobile-friendly design for seamless access across devices.
+
+---
+
+## **Conclusion**
+This document reflects the real-world insights from stakeholders to ensure the LinkedIn clone addresses diverse needs. By focusing on usability, scalability, and feature richness, the platform will provide a professional networking experience that aligns with modern user expectations.
