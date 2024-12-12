@@ -3,7 +3,7 @@
 ## *1. Introduction*
 This document outlines the software architecture for the LinkedIn clone, adhering to the *C4 Model* (Context, Containers, Components, and Code) and following *IEEE-Std-42010-2011* standards for architectural description. 
 
-The LinkedIn clone serves as a professional networking platform where *Job Seekers, **Recruiters, and **Organizations* can interact to build connections, post jobs, and share professional updates.
+The LinkedIn clone serves as a professional networking platform where *Job Seekers*, *Recruiters*, and *Organizations* can interact to build connections, post jobs, and share professional updates.
 
 ---
 
