@@ -7,18 +7,18 @@ The purpose of this Software Requirements Specification (SRS) document is to out
 The platform aims to enable users to create professional networks, explore job opportunities, and improve career prospects within a social networking interface. Key features will include user profile management, job postings, professional networking, skill endorsements, content sharing, and administrative tools through an admin dashboard.
 
 ## 1.3 Definitions, Acronyms, and Abbreviations
-- **SRS**: Software Requirements Specification  
-- **UI**: User Interface  
-- **API**: Application Programming Interface  
-- **CRUD**: Create, Read, Update, Delete  
-- **CMS**: Content Management System  
-- **DMCA**: Digital Millennium Copyright Act  
-- **GDPR**: General Data Protection Regulation  
+- **SRS**: Software Requirements Specification
+- **UI**: User Interface
+- **API**: Application Programming Interface
+- **CRUD**: Create, Read, Update, Delete
+- **CMS**: Content Management System
+- **DMCA**: Digital Millennium Copyright Act
+- **GDPR**: General Data Protection Regulation
 
 ## 1.4 References
-- SWEBOK 5.2 section for software specification standards  
-- OWASP guidelines for secure web application development  
-- GDPR and DMCA guidelines for data and content protection  
+- SWEBOK 5.2 section for software specification standards
+- OWASP guidelines for secure web application development
+- GDPR and DMCA guidelines for data and content protection
 
 ---
 
@@ -64,7 +64,7 @@ The platform will consist of a responsive web application and mobile apps for iO
 
 
 
-# Functional Requirements 
+# Functional Requirements
 
 ## 3.1 User Registration and Authentication
 - **FR-1**: Users can register via email or through third-party services like Google, Facebook, or LinkedIn.
@@ -204,3 +204,38 @@ The platform will utilize RESTful APIs for communication between the frontend an
 - **Scaling**: Horizontal auto-scaling to handle traffic spikes, with caching through Redis and CDN for static content.
 - **Security**: End-to-end encryption (AES-256), OAuth 2.0 for authentication, and RBAC for role-based permissions.
 
+---
+
+# Use Cases
+
+This document provides an overview of **Use Case Diagrams**, including standard use cases, abuse cases, and error cases. Each diagram is visualized below.
+
+---
+
+## 1. Standard Use Case
+
+This diagram illustrates the primary use case, showing the expected interactions and processes within the system.
+
+![Standard Use Case](https://www.plantuml.com/plantuml/png/RP1DReCm48NtFiKe-wWtg8AGka09Gg0SO6e6CggnqNYyoErRyoDIjRjFxts2Dxv4HT4qEUDeKD00mkD3eMSXgnoyGQj1u5I5J-Y8laXEW16gRYzQif9OjxpTuwAVs2zHOKoAP34Id4eXL7gxppqgGIDXO4UBLTwRG-i8nJvW208__usBq7rKXr3Citl-xelNlWbHSmLNZif-N9MckXxA3JsEz5Uw_IFLGNbWY_b1Dgj-MVkCIXEKmGyy9bciTN9fJDN1-VoUpzim7x9ZtcpQZ7dRHdc0ALQiLyXVkf3lq-I-0G00)
+
+---
+
+## 2. Abuse Case
+
+This diagram demonstrates potential abuse scenarios within the system and highlights how they might be addressed.
+
+![Abuse Case](https://www.plantuml.com/plantuml/png/RP31Zl8m38JlUGgBEpp0Vq1KV-5GjGXHmTqR3B9e4XGx1xJQTrzIMgb5UujcnkFFsOXYrEGwWrP3X4M37LiEIQ38mW9Ge2b6jmfVq1BTwMrKxMWSoSR4EkX7Oo9PHN_h2DgdA3duDW00ISYY42mAQqa4Ja8HIbJivufJEKyTWYZiy4xmsYnzvh2hvfdsWGxsGVdA5fM3V-VQlVcPOlmFoIj5HoWfadpoP0ROUXkVZzpHLvJRUUPCaQ_FZ08rYxA_lLUTgteUhDcn_i5KzqnD0SlbEXyxFFDDmpDZc-77LfVL-XFRbDjn6Fv1myetL38lWh5eAjVxeNCgRiXVakj-0G00)
+
+---
+
+## 3. Error Case
+
+This diagram captures error scenarios within the system and illustrates the actions or states leading to these errors.
+
+![Error Case](https://www.plantuml.com/plantuml/png/NP5HJiCm38RVSmehxxi03sXeW3I44DBO0KBZRHPfFDdffWbnTnelQ2rloU-lxlUtIor1oj0dbt1Ne308xGy58WbsXJWx5xh20dwhA1w2mjRLKSZxXE1VANzXN6TO9Sveyyr52_RmxG001iKkQ0LvJzdcTfeF7ux7T84T2xpmfnfbqNYRWnlC4Twuq8wwKFMkS8qjLVVZfdfF8Ypg_ykiyoaaYh0IZ9WBXNJTC-OrciEZXDcqDy9pe3I8TQswzJf_OEe77zGZ3yLe6xIWYcvXiRXltyFEjzPsdVPoXbdQBE6k5kbOQbzu3wfdbkZTtmvZcs1bstzPIT23TxVLnatL34OvKOVmoEVitNA4Xpxz0W00)
+
+---
+
+Each diagram is generated using PlantUML. For more details on how these diagrams are constructed or modified, visit [PlantUML's Documentation](https://plantuml.com/).
+
+---
