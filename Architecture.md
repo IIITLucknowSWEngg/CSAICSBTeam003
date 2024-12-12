@@ -78,8 +78,7 @@ The Deployment Diagram represents the infrastructure and key components of the L
 ---
 
 ## *9. Future Enhancements*
-- Add sequence diagrams to depict workflows like "Job Application" or "Profile Update."
-- Include a deployment diagram to detail the physical infrastructure (cloud services, servers).
+- Add sequence diagrams to depict workflows like "Job Application" or "Profile Update".
 - Extend component diagrams to include messaging and recommendation services.
 
 ---
