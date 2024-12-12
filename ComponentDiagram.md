@@ -20,7 +20,7 @@ This document outlines the individual components of the LinkedIn Clone system an
   - Messaging and notifications
 
 ### **Diagram:**
-[User Interface Component Diagram](https://www.plantuml.com/plantuml/png/NPB1ReCm44JlVCKgzoXt3bNIA9MecgegedSN5h0AwyXUYlhtNOnTdDxCp0DcHZuwLfQdSSXgCzuC8J7iAeSM2cAqhQfn1yf1LQJ0QU9U3hfMh0r1YVPR1t2nKlJDcbOF25T5giDHD8y5EILVaMTZl-1iYB1UFkmy6lGKlQ9pgjFKGVdZ64VF_Oaf-Mm-9PwoTG-A6dX7yIH4imQ_aF1hRW7Nf_HjYSBBuGcn-TyWU8jrryAmRcMO97-gP5bLm7x_u7U275wC_FDGwewcMxJYP3byQ9mFbqPpr5naubXvY9Mk5fbjfHpElUB3Ac04jiu2R4C5Doqe_gCriqE_H03kYuMqS1hGiikEih7Sgby0)
+![User Interface Component Diagram](https://www.plantuml.com/plantuml/png/NPB1ReCm44JlVCKgzoXt3bNIA9MecgegedSN5h0AwyXUYlhtNOnTdDxCp0DcHZuwLfQdSSXgCzuC8J7iAeSM2cAqhQfn1yf1LQJ0QU9U3hfMh0r1YVPR1t2nKlJDcbOF25T5giDHD8y5EILVaMTZl-1iYB1UFkmy6lGKlQ9pgjFKGVdZ64VF_Oaf-Mm-9PwoTG-A6dX7yIH4imQ_aF1hRW7Nf_HjYSBBuGcn-TyWU8jrryAmRcMO97-gP5bLm7x_u7U275wC_FDGwewcMxJYP3byQ9mFbqPpr5naubXvY9Mk5fbjfHpElUB3Ac04jiu2R4C5Doqe_gCriqE_H03kYuMqS1hGiikEih7Sgby0)
 
 ---
 
@@ -32,7 +32,7 @@ This document outlines the individual components of the LinkedIn Clone system an
 - Encrypts sensitive user data for secure transmission.
 
 ### **Diagram:**
-[Authentication Service Component Diagram](https://www.plantuml.com/plantuml/png/RO-x3i8m34NtV8NLlM9dGEMnL6AhocuIKonQft9Slf-cFDI1BRdtwDYkag7QDFJEns6CGc9Gx2Uxpm_sQ1m56j8dUoe04-HgZHxGFqW2dD3mYkaDVJzhi4saK8kHtl3ZQcldsXhAShTeOGldsB5i6kva6btESldJpS05Umve14Uba5V4Flq56ujAi0pDgQj8mdpb2m00)
+![Authentication Service Component Diagram](https://www.plantuml.com/plantuml/png/RO-x3i8m34NtV8NLlM9dGEMnL6AhocuIKonQft9Slf-cFDI1BRdtwDYkag7QDFJEns6CGc9Gx2Uxpm_sQ1m56j8dUoe04-HgZHxGFqW2dD3mYkaDVJzhi4saK8kHtl3ZQcldsXhAShTeOGldsB5i6kva6btESldJpS05Umve14Uba5V4Flq56ujAi0pDgQj8mdpb2m00)
 
 ---
 
@@ -43,7 +43,7 @@ This document outlines the individual components of the LinkedIn Clone system an
 - Stores user information such as skills, education, and work experience.
 
 ### **Diagram:**
-[Profile Management Component Diagram](https://www.plantuml.com/plantuml/png/JOyn2y8m48Nt_8gZU-dk84Lqw228KlSpVPLWayZbrBzlMWrqlEzzlBjhaxBeoq_6Hl-C0K6fEaaStGGwSk0xV6OLSQ8_NfixjW-4WVQiVEE4nIl3MkmJXBgWa97jJ-ixO_gEwdfRccb3LuTFSnYS5fPC2MUnL6Vpeb7GdA7Yy0Oj2-ROjFcW_D0N)
+![Profile Management Component Diagram](https://www.plantuml.com/plantuml/png/JOyn2y8m48Nt_8gZU-dk84Lqw228KlSpVPLWayZbrBzlMWrqlEzzlBjhaxBeoq_6Hl-C0K6fEaaStGGwSk0xV6OLSQ8_NfixjW-4WVQiVEE4nIl3MkmJXBgWa97jJ-ixO_gEwdfRccb3LuTFSnYS5fPC2MUnL6Vpeb7GdA7Yy0Oj2-ROjFcW_D0N)
 
 ---
 
@@ -54,7 +54,7 @@ This document outlines the individual components of the LinkedIn Clone system an
 - Manages relationships between users to create a professional network.
 
 ### **Diagram:**
-[Network Connections Component Diagram](https://www.plantuml.com/plantuml/png/RSyn3i8m30NGFQUmklS23AW2bWomvG0cDGYLVgFOYEi3XKWPEjh_wLiUpBduSxw7hFD38N3gJk8lBHFj5P3iDuLrn4R_VKjtd2V1I0TsFhF9ukhGmcHIACAbN3Z_M8eXf4XzlwtDjA4ZWw_IdWur_C9QlIgND0o2yVFG6m00)
+![Network Connections Component Diagram](https://www.plantuml.com/plantuml/png/RSyn3i8m30NGFQUmklS23AW2bWomvG0cDGYLVgFOYEi3XKWPEjh_wLiUpBduSxw7hFD38N3gJk8lBHFj5P3iDuLrn4R_VKjtd2V1I0TsFhF9ukhGmcHIACAbN3Z_M8eXf4XzlwtDjA4ZWw_IdWur_C9QlIgND0o2yVFG6m00)
 
 ---
 
@@ -68,7 +68,7 @@ This document outlines the individual components of the LinkedIn Clone system an
   - File sharing
 
 ### **Diagram:**
-[Messaging System Component Diagram](https://www.plantuml.com/plantuml/png/JS-n2i9030RW_PuYT2_T7QIeImSNInyWNdzhqSl99Gg-lIU5QyVy-V93MZLEzWvFvsDuHO4OLMUeyZJBHFrN3Q4YLYhXLXxOFo0ZdTZuoeg_BCCM3ef4dHZIZVt2XiwveQEwtg_TjAFZdQrP0gXRDzcLvinwYmdD1PPcV43be8MC-PqV)
+![Messaging System Component Diagram](https://www.plantuml.com/plantuml/png/JS-n2i9030RW_PuYT2_T7QIeImSNInyWNdzhqSl99Gg-lIU5QyVy-V93MZLEzWvFvsDuHO4OLMUeyZJBHFrN3Q4YLYhXLXxOFo0ZdTZuoeg_BCCM3ef4dHZIZVt2XiwveQEwtg_TjAFZdQrP0gXRDzcLvinwYmdD1PPcV43be8MC-PqV)
 
 ---
 
@@ -79,7 +79,7 @@ This document outlines the individual components of the LinkedIn Clone system an
 - Allows users to search for jobs, view postings, and apply directly.
 
 ### **Diagram:**
-[Job Search and Recommendation Engine Diagram](https://www.plantuml.com/plantuml/png/JSyn3i8m30NGFQVuwjuBCA0AmL0sG3s0cnge80vAt87ROnH1ElxavSVkibBI9JoTZ-4LXKNH7EE82rFoTv1CEBFT1PQ9T8w2WzncuGQKOR2azUiT-OTXx4bff5paBwpXa3cX5-Lq9L_Oq3itz6ZRRUt61dKWLuyD_MlDd1PExw_ChhFlRQKF)
+![Job Search and Recommendation Engine Diagram](https://www.plantuml.com/plantuml/png/JSyn3i8m30NGFQVuwjuBCA0AmL0sG3s0cnge80vAt87ROnH1ElxavSVkibBI9JoTZ-4LXKNH7EE82rFoTv1CEBFT1PQ9T8w2WzncuGQKOR2azUiT-OTXx4bff5paBwpXa3cX5-Lq9L_Oq3itz6ZRRUt61dKWLuyD_MlDd1PExw_ChhFlRQKF)
 
 ---
 
@@ -90,7 +90,7 @@ This document outlines the individual components of the LinkedIn Clone system an
 - Displays a dynamic feed, prioritizing relevant content based on algorithms.
 
 ### **Diagram:**
-[Content Feed Management Component Diagram](https://www.plantuml.com/plantuml/png/JOz12i8m44NtESMd-rwW2obLX2vSvW1ZCYfe9fACU7qpQ2Mx-RptFynSbOg-qiE5d9vPM1J3FelQSMIEE97GbLFB0wZYnmprbON2dINYG4fdgcpkF_IYhromYdAvKFXgVdNEhnZ7NR-E2Kl9xygmv7fYvhQDgN4DjwtgPfRO_la0)
+![Content Feed Management Component Diagram](https://www.plantuml.com/plantuml/png/JOz12i8m44NtESMd-rwW2obLX2vSvW1ZCYfe9fACU7qpQ2Mx-RptFynSbOg-qiE5d9vPM1J3FelQSMIEE97GbLFB0wZYnmprbON2dINYG4fdgcpkF_IYhromYdAvKFXgVdNEhnZ7NR-E2Kl9xygmv7fYvhQDgN4DjwtgPfRO_la0)
 
 ---
 
@@ -104,7 +104,7 @@ This document outlines the individual components of the LinkedIn Clone system an
 - Supports push notifications.
 
 ### **Diagram:**
-[Notifications Component Diagram](https://www.plantuml.com/plantuml/png/LS-n3W8n20RWdQSWjzyBE9ZJ69CkRdL7v6BZ7JK5u-lRQ3Jj27pyWScSYZ_N1JYlZwoYZiCfUveJawUiDY0PTfsMxedlebSyaDE5J3xwLxGmcXGCwb9cuY-B0I067CTjduyRF2TvuMwHuWRzhEf_VeL7SRxrwp3LW-f7Rm00)
+![Notifications Component Diagram](https://www.plantuml.com/plantuml/png/LS-n3W8n20RWdQSWjzyBE9ZJ69CkRdL7v6BZ7JK5u-lRQ3Jj27pyWScSYZ_N1JYlZwoYZiCfUveJawUiDY0PTfsMxedlebSyaDE5J3xwLxGmcXGCwb9cuY-B0I067CTjduyRF2TvuMwHuWRzhEf_VeL7SRxrwp3LW-f7Rm00)
 
 ---
 
@@ -115,7 +115,7 @@ This document outlines the individual components of the LinkedIn Clone system an
 - Facilitates integration with third-party services.
 
 ### **Diagram:**
-[APIs Component Diagram](https://www.plantuml.com/plantuml/png/JSx12i8m30RWUvyYxBuNy21JT-b94Ve0CKOGNJgQ-Fx65aTlIVwFdqngMEopl0FbPSt2OZ0SBb47G8NVq0T9kK0Ku_90uafIxC4HwSLoXnaDRwYD_9SGKeHntDTQsBKY97jcqL1l7cxQmUcQPZYlZfgPlDfV_G80)
+![APIs Component Diagram](https://www.plantuml.com/plantuml/png/JSx12i8m30RWUvyYxBuNy21JT-b94Ve0CKOGNJgQ-Fx65aTlIVwFdqngMEopl0FbPSt2OZ0SBb47G8NVq0T9kK0Ku_90uafIxC4HwSLoXnaDRwYD_9SGKeHntDTQsBKY97jcqL1l7cxQmUcQPZYlZfgPlDfV_G80)
 
 ---
 
@@ -126,6 +126,6 @@ This document outlines the individual components of the LinkedIn Clone system an
 - Combines SQL (structured) and NoSQL (unstructured) databases for flexibility.
 
 ### **Diagram:**
-[Backend Database Component Diagram](https://www.plantuml.com/plantuml/png/XP11JmCX48Nl_8f9xurt3wPQxS6aHhlH-tHvRKbtmS1iJV-zi4isb9XuWtaVvCst2i9UXhvJhUk_dOKLMZnnUuRLzCp2UmvO48VvKeAFWvpYmRGinbbgu2-cdV0KbUYxTmVJWRPi-OW-paOiZqlo3VBZ_9dMpbgqwUCmedbUebk4m4TZZzHSWw0VkNbOagzkJmtOjoTYgsc7cFMmUYh-OYC_zOxWT2jVnogI3Xj0rnlaB4KtMpWnXomczoydIYL1j5m-p6BfdhwuCve5jFRGIIntGML5DTk8yxZRGRp11VGPuCTOPKyLdskNLjLiwf-_9mv1pNBg1ny3_3Mv2whmKLCRIFIV0NNZuq-qKhQ2rKFV_G80)
+![Backend Database Component Diagram](https://www.plantuml.com/plantuml/png/XP11JmCX48Nl_8f9xurt3wPQxS6aHhlH-tHvRKbtmS1iJV-zi4isb9XuWtaVvCst2i9UXhvJhUk_dOKLMZnnUuRLzCp2UmvO48VvKeAFWvpYmRGinbbgu2-cdV0KbUYxTmVJWRPi-OW-paOiZqlo3VBZ_9dMpbgqwUCmedbUebk4m4TZZzHSWw0VkNbOagzkJmtOjoTYgsc7cFMmUYh-OYC_zOxWT2jVnogI3Xj0rnlaB4KtMpWnXomczoydIYL1j5m-p6BfdhwuCve5jFRGIIntGML5DTk8yxZRGRp11VGPuCTOPKyLdskNLjLiwf-_9mv1pNBg1ny3_3Mv2whmKLCRIFIV0NNZuq-qKhQ2rKFV_G80)
 
 ---
