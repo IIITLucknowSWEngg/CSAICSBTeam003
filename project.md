@@ -1,4 +1,4 @@
-# Project Scope for LinkedIn Clone
+# Project Scope for LinkedIn 
 
 ## Included Features:
 
