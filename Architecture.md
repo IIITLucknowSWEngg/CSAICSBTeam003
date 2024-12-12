@@ -73,7 +73,7 @@ The Deployment Diagram represents the infrastructure and key components of the L
 1. *Logical View*: Context, Containers, and Component diagrams.
 2. *Development View*: Code-level diagram for specific modules.
 3. *Process View*: Workflow diagrams (to be added in future iterations).
-4. *Physical View*: Deployment diagram (to be created).
+4. *Physical View*: Deployment diagram.
 
 ---
 
