@@ -1,0 +1,19 @@
+**CROSS REFERENCE MATRIX**  
+
+| **URD Topic**          | **SRS Section Number** | **SRS Topic**             | **Architecture Section** | **Architecture Topic**  | **Design Sec Number** | **Design Topic**         | **Test Sec Number** | **Test Topics**              |
+|-------------------------|------------------------|---------------------------|---------------------------|--------------------------|------------------------|--------------------------|---------------------|------------------------------|
+| User Registration       | 2.1.1                | User Authentication       | 1                         | System Architecture      | 3.2.1                 | User Interface Module    | 1.1                 | User Registration            |
+| Login                   | 2.1.2                | User Authentication       | 1                         | System Architecture      | 3.2.1                 | User Interface Module    | 1.2                 | Login                        |
+| Profile Creation        | 2.1.3                | Profile Management        | 1                         | System Architecture      | 3.2.1                 | Profile Module           | 1.3                 | Profile Creation            |
+| Job Posting             | 2.1.4                | Job Management            | 2                         | Data Storage             | 3.2.2                 | Backend Module           | 2.1                 | Job Posting                 |
+| Content Sharing         | 2.1.5                | Content Sharing           | 2                         | Data Storage             | 3.2.2                 | Feed Module              | 2.2                 | Content Sharing             |
+| Networking (Connections)| 2.1.6                | Networking and Connections| 3                         | API Features             | 3.3                   | Networking Module        | 3.1                 | Connection Requests         |
+| Messaging               | 2.1.7                | Direct Messaging          | 3                         | API Features             | 3.2.3                 | Messaging Module         | 3.5                 | Direct Messaging            |
+| Search and Explore      | 2.1.8                | Search and Explore        | 2                         | Data Storage             | 3.2.4                 | Search Module            | 3.6                 | Search and Explore          |
+| Notifications           | 2.1.9                | Notifications             | 3.1                       | API Features             | 3.4                   | Notifications Module     | 4.1                 | Notifications              |
+| Security and Privacy    | 2.2.1                | Security and Privacy      | 1                         | System Architecture      | 5.2                   | Security Module          | 1, 2.1, 2.3         | Security and Privacy        |
+| Performance and Scalability | 2.2.2            | Performance and Scalability | 2                        | Data Storage             | 3.1                   | Architectural Design     | 3.1, 3.2, 4.4       | Performance and Scalability |
+| Skill Endorsements      | 2.2.3                | Profile Features          | 3.1                       | API Features             | 3.5                   | Endorsements Module      | 4.2                 | Skill Endorsements          |
+| Job Applications        | 2.2.4                | Job Management            | 2                         | Data Storage             | 3.2.2                 | Application Module       | 2.3                 | Job Applications           |
+| Analytics and Insights  | 2.2.5                | Analytics and Insights    | 4                         | Data Processing          | 4.1                   | Analytics Module         | 5.4                 | Analytics and Insights      |
+
