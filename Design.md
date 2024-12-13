@@ -30,6 +30,7 @@ The LinkedIn Clone is a platform that replicates core features of LinkedIn, prov
 - **Deployment:**
   - Heroku for the backend
   - RabbitMQ for messaging portal
+  - AWS for media
   - Netlify for the frontend
 
 ## Features
