@@ -516,54 +516,6 @@ describe('User Comment on a Post', function() {
 - **Test Management Tools:** Jira or TestRail to manage test cases, test execution, and defect logging.
 
 
----
-
-## Non-Functional Requirements for LinkedIn Clone
-
-### 1. Performance
-- **Response Time:** The application should respond to user actions (e.g., logging in, posting, liking) within 2 seconds.
-- **Load Time:** The homepage and user feed should load within 5 seconds under normal network conditions.
-- **Scalability:** The system should be able to handle a growing number of users and posts, supporting tens of thousands of concurrent users.
-  
-### 2. Security
-- **Authentication:** The application should use secure authentication protocols (e.g., OAuth 2.0) for login and registration.
-- **Authorization:** Only authorized users should be able to access and edit their profiles and posts.
-- **Data Encryption:** All sensitive data (e.g., passwords, personal information) should be encrypted both in transit (using HTTPS) and at rest.
-- **Session Management:** User sessions should be securely managed, with automatic logout after a specified period of inactivity.
-
-### 3. Usability
-- **User Interface:** The interface should be intuitive and user-friendly, ensuring that users can easily navigate through the app, view profiles, posts, and interact with content.
-- **Accessibility:** The app should adhere to accessibility standards (WCAG 2.1) to ensure it is usable by people with disabilities (e.g., screen readers, keyboard navigation).
-- **Cross-Platform Compatibility:** The app should work seamlessly across different platforms (e.g., desktop, mobile, tablet) and browsers (e.g., Chrome, Firefox, Safari).
-
-### 4. Reliability
-- **Uptime:** The application should have a minimum uptime of 99.9%, ensuring that it is available and functioning most of the time.
-- **Error Handling:** The system should handle errors gracefully, providing appropriate error messages to the user without crashing the application.
-- **Backup and Recovery:** Regular backups of user data should be taken, and a recovery plan should be in place to restore data in case of failure.
-
-### 5. Maintainability
-- **Code Quality:** The code should be clean, modular, and well-documented to make it easy to maintain and extend.
-- **Version Control:** The project should use version control systems (e.g., Git) for efficient collaboration and code management.
-- **Testing:** The system should be fully tested with both unit tests and end-to-end tests to ensure functionality and prevent regressions.
-
-### 6. Availability
-- **24/7 Availability:** The system should be available at all times, with minimal downtime for maintenance.
-- **Global Accessibility:** The app should be accessible worldwide, with a content delivery network (CDN) used to ensure fast loading times across different regions.
-
-### 7. Compatibility
-- **Mobile Responsiveness:** The LinkedIn Clone should be fully responsive and work well on various screen sizes, especially mobile devices.
-- **Third-party Integrations:** The system should integrate with third-party services such as email providers, cloud storage, and payment gateways for added functionality.
-
----
-
-## Conclusion
-
-The **LinkedIn Clone** project aims to replicate the core functionalities of the professional networking platform LinkedIn, with features such as user profiles, job postings, networking, and news feed. The application should prioritize both functional and non-functional requirements to deliver a high-quality user experience.
-
-The **non-functional requirements** ensure that the system performs efficiently, remains secure, is easy to use, and is reliable under different conditions. Performance, security, usability, and scalability are critical to handling large numbers of users while maintaining a smooth experience. Accessibility and cross-platform compatibility will ensure the app reaches a broad user base, including people with disabilities. Additionally, maintainability and version control are necessary for the app's long-term success, allowing for future improvements and extensions.
-
-By fulfilling these requirements, the **LinkedIn Clone** can provide a stable, efficient, and enjoyable platform for professionals to connect, share, and grow their careers.
-
 
 
 
