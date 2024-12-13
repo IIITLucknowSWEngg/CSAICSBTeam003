@@ -59,7 +59,7 @@ The LinkedIn Clone is a platform that replicates core features of LinkedIn, prov
 
 ### Frontend Architecture
 
-![System achitecture](/frontend-arch.png)
+![System achitecture](Diagrams/frontend-arch.png)
 
 ```plantuml
 @startuml
