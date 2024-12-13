@@ -104,7 +104,7 @@ The frontend is built using React.js, following a component-based architecture t
 
 ### Backend Architecture
 
-![System achitecture](/backend-arch.png)
+![System achitecture](Diagrams/backend-arch.png)
 
 ```plantuml
 @startuml
@@ -147,7 +147,7 @@ The backend is built using Node.js with Express.js to handle routing and API req
 
 ### Database Design
 
-![System achitecture](/database-design.png)
+![System achitecture](Diagrams/database-design.png)
 
 ```plantuml
 @startuml
@@ -288,7 +288,7 @@ The database is built using MongoDB with the following key collections:
 
 ## Interface Design
 
-![System achitecture](/interface-design.png)
+![System achitecture](Diagrams/interface-design.png)
 ```plantuml
 @startuml
 !define RECTANGLE class
