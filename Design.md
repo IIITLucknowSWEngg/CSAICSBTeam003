@@ -29,6 +29,7 @@ The LinkedIn Clone is a platform that replicates core features of LinkedIn, prov
   - JWT (JSON Web Token)
 - **Deployment:**
   - Heroku for the backend
+  - RabbitMQ for messaging portal
   - Netlify for the frontend
 
 ## Features
