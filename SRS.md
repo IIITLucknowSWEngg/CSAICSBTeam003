@@ -39,6 +39,9 @@ The platform will consist of a responsive web application and mobile apps for iO
 - **Admin Dashboard**: Platform administrators can manage user roles, moderate content, and view platform analytics.
 - **Company Profiles**: Organizations can create company profiles, post jobs, and share updates.
 - **Event Management**: Users can create, join, and promote professional events such as webinars and workshops.
+- **Password Recovery**: Users can reset their password through a recovery email or SMS process.
+- **Account Deactivation and Deletion**: Users can deactivate or delete their account with confirmation steps to ensure clarity.
+- **Notifications**: Users will receive notifications about profile updates, job application statuses, new messages, and more.
 
 ## 2.3 User Classes and Characteristics
 - **Job Seekers**: Users looking for employment opportunities and professional networking.
@@ -62,10 +65,9 @@ The platform will consist of a responsive web application and mobile apps for iO
 - Third-party services for authentication, payment, and messaging will remain available.
 - Content must adhere to copyright laws and DMCA regulations.
 
-
-## Functional Requirements
-
 ---
+
+# 3. Functional Requirements
 
 ### **Use Case 1: User Registration and Login**  
 **Actors**: User  
@@ -80,7 +82,7 @@ The platform will consist of a responsive web application and mobile apps for iO
 
 **Alternative Flow**:  
 - If credentials are invalid, the system displays an error message.  
-- After five failed attempts, the system temporarily locks the account.  
+- After five failed attempts, the system temporarily locks the account.
 
 ---
 
@@ -95,7 +97,7 @@ The platform will consist of a responsive web application and mobile apps for iO
 3. System validates the code and activates the user account.  
 
 **Alternative Flow**:  
-- If the verification link or code is expired/invalid, the system prompts the user to request a new code.  
+- If the verification link or code is expired/invalid, the system prompts the user to request a new code.
 
 ---
 
@@ -110,7 +112,7 @@ The platform will consist of a responsive web application and mobile apps for iO
 3. System validates and saves the changes.  
 
 **Alternative Flow**:  
-- If input is invalid (e.g., missing required fields), the system displays an error message.  
+- If input is invalid (e.g., missing required fields), the system displays an error message.
 
 ---
 
@@ -122,7 +124,7 @@ The platform will consist of a responsive web application and mobile apps for iO
 **Main Flow**:  
 1. User accesses visibility settings in their profile.  
 2. User selects one of the visibility options: Public, Private, or Connections Only.  
-3. System updates profile visibility accordingly.  
+3. System updates profile visibility accordingly.
 
 ---
 
@@ -137,7 +139,7 @@ The platform will consist of a responsive web application and mobile apps for iO
 3. System saves and publishes the job posting.  
 
 **Alternative Flow**:  
-- If required fields are missing, the system prompts the admin to complete the input.  
+- If required fields are missing, the system prompts the admin to complete the input.
 
 ---
 
@@ -150,10 +152,10 @@ The platform will consist of a responsive web application and mobile apps for iO
 1. User views a job posting and clicks “Apply.”  
 2. User uploads a resume and cover letter.  
 3. System submits the application to the company’s job management dashboard.  
-4. Recruiters filter and view applicants based on skills, location, and experience.  
+4. Recruiters filter and view applicants based on skills, location, and experience.
 
 **Alternative Flow**:  
-- If required documents are missing, the system prompts the user to upload them.  
+- If required documents are missing, the system prompts the user to upload them.
 
 ---
 
@@ -165,7 +167,7 @@ The platform will consist of a responsive web application and mobile apps for iO
 **Main Flow**:  
 1. User navigates to a connection’s profile.  
 2. User selects a skill to endorse.  
-3. System records the endorsement.  
+3. System records the endorsement.
 
 ---
 
@@ -178,213 +180,56 @@ The platform will consist of a responsive web application and mobile apps for iO
 1. User opens the messaging interface.  
 2. User selects a connection and composes a message.  
 3. User optionally attaches documents or links.  
-4. System sends the message and notifies the recipient in real time.  
-
-**Alternative Flow**:  
-- If the recipient’s inbox is full, the system displays an error message.  
+4. System sends the message and notifies the recipient in real-time.
 
 ---
 
-### **Use Case 9: Admin Moderation**  
-**Actors**: Admin  
-**Goal**: Allow platform admins to moderate content, manage user roles, and oversee platform activity.  
-**Precondition**: Admin is logged into the platform.  
-**Postcondition**: Moderation actions (e.g., content removal, user bans) are applied.  
-**Main Flow**:  
-1. Admin accesses the moderation dashboard.  
-2. Admin views reports or flagged content.  
-3. Admin takes actions (ban user, remove content, or update roles).  
-
-**Alternative Flow**:  
-- If an action is invalid (e.g., banning a non-existent user), the system displays an error message.  
-
----
-
-### **Use Case 10: Notifications**  
-**Actors**: User  
-**Goal**: Notify users about key events, such as messages, endorsements, or job activity.  
-**Precondition**: User has activity that triggers a notification.  
-**Postcondition**: User is notified in real time.  
-**Main Flow**:  
-1. System detects a trigger event (e.g., new message, job application update).  
-2. System sends a notification to the user.  
-3. User views notifications in the dashboard.  
-
----
-
-### **Use Case 11: Password Recovery**  
-**Actors**: User  
-**Goal**: Allow users to recover accounts by resetting their passwords.  
-**Precondition**: User’s email or phone number is valid.  
-**Postcondition**: Password is successfully reset.  
-**Main Flow**:  
-1. User clicks “Forgot Password” on the login screen.  
-2. User enters their registered email or phone number.  
-3. System sends a password reset link or code.  
-4. User follows the link or enters the code to reset the password.  
-
-**Alternative Flow**:  
-- If the email or phone number is unrecognized, the system notifies the user.  
-
----
-
-### **Use Case 12: Account Deactivation and Deletion**  
-**Actors**: User  
-**Goal**: Allow users to deactivate or permanently delete their accounts.  
-**Precondition**: User is logged in.  
-**Postcondition**: User account is deactivated or removed from the system.  
-**Main Flow**:  
-1. User navigates to account settings.  
-2. User selects “Deactivate” or “Delete Account.”  
-3. System confirms the action and processes the request.  
-
-**Alternative Flow**:  
-- If the user has active job postings or pending applications, the system prompts for resolution before deletion.  
-
----
-
-# Non-Functional Requirements
+# 4. Non-Functional Requirements
 
 ## 4.1 Performance Requirements
-- **NFR-1**: The system should support a good amount of users
-- **NFR-2**: Job postings and search results should load within 1 second under standard conditions.
+- **Response Time**: All user actions should take no more than 2 seconds.
+- **Throughput**: The platform must support up to 10,000 concurrent users.
+- **Scalability**: The platform should scale horizontally to accommodate growth.
 
 ## 4.2 Security Requirements
-- **NFR-3**: All personal data must be encrypted in storage and during transmission.
-- **NFR-4**: User sessions must expire after a period of inactivity for security purposes.
+- **Encryption**: All sensitive data (e.g., passwords, personal information) must be encrypted using AES-256.
+- **Authentication**: OAuth 2.0 for secure login.
+- **Authorization**: Role-based access control (RBAC) for different user types (admin, user, company).
 
 ## 4.3 Usability Requirements
-- **NFR-5**: The platform’s user interface must be intuitive, with clear navigation and accessible on mobile and desktop devices.
-- **NFR-6**: The system should support multiple languages for global users.
+- **User Interface**: The platform will provide an intuitive, easy-to-use interface.
+- **Accessibility**: The platform must be accessible to users with disabilities, following WCAG 2.1 guidelines.
 
-## 4.4 Scalability Requirements
-- **NFR-7**: The platform should scale to handle millions of users without performance degradation.
-- **NFR-8**: The platform must integrate with a CDN to handle global content delivery efficiently.
-
-## 4.5 Regulatory and Compliance Requirements
-- **NFR-9**: The platform must comply with GDPR, ensuring user data privacy and the right to be forgotten.
-- **NFR-10**: Content posted on the platform must be moderated to ensure compliance with DMCA for copyright protection.
-
-# 5. Quality Indicators
-
-## 5.1 Document Quality Metrics
-
-To ensure the SRS document is complete and clear, the following quality metrics will be applied:
-
-- **Imperative Statements**: Use terms like "must" and "shall" for essential requirements to avoid ambiguity. For instance, "Users must be able to upload a profile image" clearly denotes a mandatory feature.
-- **Consistency**: Ensure terminology is consistent throughout the document. Terms like "user," "admin," "profile," and "job" will have a uniform definition and application.
-- **Clarity**: Every functional and non-functional requirement must be unambiguous. Use plain, concise language to make the document accessible to both technical and non-technical stakeholders.
-- **Traceability**: Each requirement will be uniquely identified with a code (e.g., FR-1, NFR-1) to ensure traceability during development and testing. This allows for easy tracking of each requirement’s implementation and verification.
-- **Completeness**: The SRS will cover all functional, non-functional, external interface, and system requirements comprehensively, including detailed use cases and system constraints.
-- **Prioritization**: Critical requirements will be prioritized, allowing the development team to focus on high-impact features (e.g., security and scalability) first.
-
-## 5.2 Validation and Verification
-
-- **Validation**: The system must align with business goals and user needs. To validate this:
-  - Conduct user acceptance testing (UAT) with a sample group of end users (professionals, recruiters, and companies).
-  - Perform stakeholder reviews to ensure the platform aligns with the business’s vision and addresses end-user requirements.
-
-- **Verification**: To verify that the system meets all specifications, the following methods will be used:
-  - **Unit Testing**: Each module will be individually tested to ensure it functions as expected.
-  - **Integration Testing**: Modules will be tested together to ensure smooth interaction between different components (e.g., profile management and job application systems).
-  - **System Testing**: The entire system will be tested in the production-like environment to ensure all components are functioning correctly.
-  - **Performance Testing**: The platform will undergo stress tests to simulate real-world scenarios, such as handling high volumes of concurrent users or job searches.
-
-# 6. External Interface Requirements
-
-## 6.1 User Interface (UI)
-
-The UI will follow modern web design principles and will be designed with a mobile-first approach to ensure usability across different devices.
-
-### UI Key Features:
-
-- **Homepage**:
-  - The homepage will include a newsfeed that displays updates from connections, job postings, and industry news.
-  - Users will have quick access to navigation tabs such as Profile, Connections, Jobs, Messages, and Notifications.
-
-- **Profile Page**:
-  - Users will have editable sections for personal details, experience, education, skills, and certifications.
-  - A Skill Endorsement feature will be available where connections can endorse listed skills.
-  - Visual indicators like progress bars or badges will show profile completeness and activity levels.
-
-- **Job Search Page**:
-  - The search interface will allow users to filter jobs by keywords, location, industry, and company size.
-  - Each job listing will have an **Apply** button, allowing users to apply directly with their uploaded resume or via LinkedIn profile.
-
-- **Messaging Interface**:
-  - Users will be able to send and receive messages from connections in a real-time chat interface.
-  - The messaging system will support file sharing (resumes, cover letters) and maintain conversation histories.
-
-- **Admin Dashboard**:
-  - Platform admins will have access to a central dashboard where they can manage users, moderate posts, and view key platform statistics like user activity, job postings, and message counts.
-
-## 6.2 API Interface
-
-The platform will utilize RESTful APIs for communication between the frontend and backend, as well as third-party integrations.
-
-### API Key Features:
-
-- **User Data APIs**:
-  - Allow users to update, retrieve, and delete profile information, including skills, experience, and connections.
-
-- **Job Listings APIs**:
-  - APIs for creating, reading, updating, and deleting job postings, managed by recruiters or companies.
-
-- **Messaging APIs**:
-  - Real-time messaging between users will be handled via WebSocket or a similar protocol, supporting text, links, and file attachments.
-
-- **Notification APIs**:
-  - Users will receive notifications for new job postings, messages, skill endorsements, and connection requests via push notifications (mobile) and email.
-
-- **Third-Party Integrations**:
-  - Integration with third-party APIs for social login (Google, Facebook, LinkedIn), payment processing (Stripe, PayPal), and file storage (AWS S3 or similar for resume uploads).
-
-# 7. System Architecture and Deployment
-
-## 7.1 System Architecture
-
-- **Frontend**: Built with React.js for the web and React Native for mobile, ensuring a responsive, scalable UI.
-- **Backend**: Uses Node.js or Django/Flask for RESTful APIs, with PostgreSQL as the primary database and Redis for caching.
-- **Microservices**: Separate services for authentication, job management, profiles, messaging, and admin functionalities, supporting modularity and scalability.
-
-## 7.2 Deployment
-
-- **Cloud-based**: Deployed on AWS or Google Cloud using Docker containers and orchestrated via Kubernetes.
-- **Scaling**: Horizontal auto-scaling to handle traffic spikes, with caching through Redis and CDN for static content.
-- **Security**: End-to-end encryption (AES-256), OAuth 2.0 for authentication, and RBAC for role-based permissions.
+## 4.4 Compatibility Requirements
+- The platform should work on modern web browsers (Chrome, Firefox, Safari) and mobile devices (iOS, Android).
+- The system should integrate with third-party services like Google and LinkedIn for authentication.
 
 ---
 
-# Use Cases
+# 5. System Features
 
-This document provides an overview of **Use Case Diagrams**, including standard use cases, abuse cases, and error cases. Each diagram is visualized below.
+## Feature 1: Admin Dashboard  
+- Admins can manage users, moderate content, and analyze platform data.
+- Allows management of job postings, user permissions, and platform settings.
 
----
+## Feature 2: Content Moderation  
+- Includes mechanisms for flagging inappropriate content.
+- Admins can review and remove flagged content.
 
-## 1. Standard Use Case
-
-This diagram illustrates the primary use case, showing the expected interactions and processes within the system.
-
-![Standard Use Case](https://www.plantuml.com/plantuml/png/RP1DReCm48NtFiKe-wWtg8AGka09Gg0SO6e6CggnqNYyoErRyoDIjRjFxts2Dxv4HT4qEUDeKD00mkD3eMSXgnoyGQj1u5I5J-Y8laXEW16gRYzQif9OjxpTuwAVs2zHOKoAP34Id4eXL7gxppqgGIDXO4UBLTwRG-i8nJvW208__usBq7rKXr3Citl-xelNlWbHSmLNZif-N9MckXxA3JsEz5Uw_IFLGNbWY_b1Dgj-MVkCIXEKmGyy9bciTN9fJDN1-VoUpzim7x9ZtcpQZ7dRHdc0ALQiLyXVkf3lq-I-0G00)
-
----
-
-## 2. Abuse Case
-
-This diagram demonstrates potential abuse scenarios within the system and highlights how they might be addressed.
-
-![Abuse Case](https://www.plantuml.com/plantuml/png/RP31Zl8m38JlUGgBEpp0Vq1KV-5GjGXHmTqR3B9e4XGx1xJQTrzIMgb5UujcnkFFsOXYrEGwWrP3X4M37LiEIQ38mW9Ge2b6jmfVq1BTwMrKxMWSoSR4EkX7Oo9PHN_h2DgdA3duDW00ISYY42mAQqa4Ja8HIbJivufJEKyTWYZiy4xmsYnzvh2hvfdsWGxsGVdA5fM3V-VQlVcPOlmFoIj5HoWfadpoP0ROUXkVZzpHLvJRUUPCaQ_FZ08rYxA_lLUTgteUhDcn_i5KzqnD0SlbEXyxFFDDmpDZc-77LfVL-XFRbDjn6Fv1myetL38lWh5eAjVxeNCgRiXVakj-0G00)
+## Feature 3: Notifications  
+- Real-time notifications for user actions, such as new messages, job application status updates, and skill endorsements.
+  
+## Feature 4: Analytics Dashboard  
+- The system tracks user engagement, job application trends, and other key metrics.
 
 ---
 
-## 3. Error Case
+# 6. Other Requirements
 
-This diagram captures error scenarios within the system and illustrates the actions or states leading to these errors.
-
-![Error Case](https://www.plantuml.com/plantuml/png/NP5HJiCm38RVSmehxxi03sXeW3I44DBO0KBZRHPfFDdffWbnTnelQ2rloU-lxlUtIor1oj0dbt1Ne308xGy58WbsXJWx5xh20dwhA1w2mjRLKSZxXE1VANzXN6TO9Sveyyr52_RmxG001iKkQ0LvJzdcTfeF7ux7T84T2xpmfnfbqNYRWnlC4Twuq8wwKFMkS8qjLVVZfdfF8Ypg_ykiyoaaYh0IZ9WBXNJTC-OrciEZXDcqDy9pe3I8TQswzJf_OEe77zGZ3yLe6xIWYcvXiRXltyFEjzPsdVPoXbdQBE6k5kbOQbzu3wfdbkZTtmvZcs1bstzPIT23TxVLnatL34OvKOVmoEVitNA4Xpxz0W00)
-
----
-
-Each diagram is generated using PlantUML. For more details on how these diagrams are constructed or modified, visit [PlantUML's Documentation](https://plantuml.com/).
+## 6.1 Legal and Regulatory Requirements
+- The platform must comply with GDPR for user data protection.
+- It must adhere to the DMCA for content sharing and copyright enforcement.
 
 ---
+
+This SRS document outlines both functional and non-functional requirements for the platform, ensuring it covers all aspects of user needs, security, and scalability.
