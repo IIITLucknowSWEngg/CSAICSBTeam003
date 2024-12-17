@@ -63,7 +63,7 @@ The platform will consist of a responsive web application and mobile apps for iO
 - Content must adhere to copyright laws and DMCA regulations.
 
 
-**Functional Requirements**
+##Functional Requirements
 
 ---
 
