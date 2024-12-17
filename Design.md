@@ -56,6 +56,22 @@ The LinkedIn Clone is a platform that replicates core features of LinkedIn, prov
   - View job postings
   - Apply for jobs
   - Follow companies for job updates
+ 
+## *Component Diagram*
+### *Purpose*
+The Component Diagram delves into the internal structure of the *API Server*, showcasing core components such as the Authentication Service, Job Management Service, and Profile Management Service.
+
+### *Diagram*
+![Component Diagram](https://www.plantuml.com/plantuml/png/RPF1RgCm48RlFCMezuexXrNRj9LORNUpGUnzWYTW1Up87XBbxTS6x1gKcptpOSt_QNYnZ8R7eSyQFLoq8iNmL5ioK2ecSyA6dW0jr6KAl8xSkODiaALMK96voWNqhHJT6tsIFS4NAcnfSBK9Myef-PlufiqPTbefQlp3TaANUef-aRNOIjL2TRTCmyJ5Oah-r4Ue24tJ0Ie11tAzWPIO1_zGZf_dTk1yIxzsex0_V1A9ROAbvrkh59hboOb9vayhAVg6pPcKW7TaFA8bJyVBIlU-d9_oXoohItX-_Z6PXW9-QJTrNibMZPVG2j8B-2Vfbdy8oQ5c0nDq5qkmr7jWeb97xJhaV2vG1A8r1toh3jr4aUk_6Nsp1FuMW9MQPLfuxScmY-dpUIegyG3sKY2xOGq9lu7OsooatR0LQqFvWTX8kX9CI-tRMKYUyeyrnFmFtuPe8shOSdz7CdTlncQ9Z2trITnqmLQsal8OJP5a8TnsG37_kBWayBNj6xj3_Gv_BWwQcHTIOXpw_m00)
+---
+
+## *Code-Level Diagram*
+### *Purpose*
+This section describes the code-level architecture for specific modules like authentication and user profile management.
+
+### *Diagram*
+![Code-Level Diagram](https://www.plantuml.com/plantuml/png/bLLDRzGm4Btlhx1wAH_geHnN2BLgEHI1XDfVCBMd6uDZ1yzasmhntuattlHb6oYS4Z_Fn_ER5-TCbBBsRLWTcqk-yv7DftHhRfY_SnP3qPbhjhdtEYnNDf182HZtpS-LCM-DZsfa1rov7N2ZsSUDYTGohhab7n3eIEG-vJ7fQqvtFh3fnkSEsoRlJ4WR7r-zdW6fLqI4ATjcu2K3-cjLUKx4WMUks0jKRMexYezBx6lBBeaE3P75rlFzUTS5RoagCjcV3NZKKyvPD4mk-CY8IT-sb4Scdxte-uyF7MVFqV87mzExG83hBQbFSTZVlpwHx3j7ofKGShn8CR8jmK3JJk3856Pz-WnvLv5BKeRCiiHHHNVDFtgMsGJ9MkwqRY2jGMFWyotTpYLJhu4HS2ms-wuqNXvevLVcnwwyBda3Y0q3VJmOj3GfQ_2Y5nITBteYusg10oMfeYWbd0Ta11Kngwndnb3INWu7UrFGkVUIA1flMCubj2agHuNHPQO3RKOieJ8rh9H7RHm7db0mLzjoH1vsHFwV2fm02XrEpRdQ4bbyOH7QCB1eHsGsW-XABNG5-otdlpCjUVhSwRNZIEBON7FOpL8QtydgwHuzEZqo9oVbCLqLQvFkurBCcoFyLDVx3sqvT9p-kkeegxB4xIhIM4R9_w7ZfDpQy8DjA6w6MjFrYe53zX1KHeILoWu6ZBvcCLjF-BsK5AY6MqDIGr94F7VE5uJ2WPvLEYpmT5dY4HS2fqiJugfje0WuXoVmohtmvyWfC1X5AHUd0CJHbUTaL6033VVOl9_O9gM0YEDDvdzjUCRHzMtu3G00)
+---
 
 ## Architecture
 
@@ -211,22 +227,6 @@ message --> user : Receive Messages
 
 @enduml
 ```
-
-## *Component Diagram*
-### *Purpose*
-The Component Diagram delves into the internal structure of the *API Server*, showcasing core components such as the Authentication Service, Job Management Service, and Profile Management Service.
-
-### *Diagram*
-![Component Diagram](https://www.plantuml.com/plantuml/png/RPF1RgCm48RlFCMezuexXrNRj9LORNUpGUnzWYTW1Up87XBbxTS6x1gKcptpOSt_QNYnZ8R7eSyQFLoq8iNmL5ioK2ecSyA6dW0jr6KAl8xSkODiaALMK96voWNqhHJT6tsIFS4NAcnfSBK9Myef-PlufiqPTbefQlp3TaANUef-aRNOIjL2TRTCmyJ5Oah-r4Ue24tJ0Ie11tAzWPIO1_zGZf_dTk1yIxzsex0_V1A9ROAbvrkh59hboOb9vayhAVg6pPcKW7TaFA8bJyVBIlU-d9_oXoohItX-_Z6PXW9-QJTrNibMZPVG2j8B-2Vfbdy8oQ5c0nDq5qkmr7jWeb97xJhaV2vG1A8r1toh3jr4aUk_6Nsp1FuMW9MQPLfuxScmY-dpUIegyG3sKY2xOGq9lu7OsooatR0LQqFvWTX8kX9CI-tRMKYUyeyrnFmFtuPe8shOSdz7CdTlncQ9Z2trITnqmLQsal8OJP5a8TnsG37_kBWayBNj6xj3_Gv_BWwQcHTIOXpw_m00)
----
-
-## *Code-Level Diagram*
-### *Purpose*
-This section describes the code-level architecture for specific modules like authentication and user profile management.
-
-### *Diagram*
-![Code-Level Diagram](https://www.plantuml.com/plantuml/png/bLLDRzGm4Btlhx1wAH_geHnN2BLgEHI1XDfVCBMd6uDZ1yzasmhntuattlHb6oYS4Z_Fn_ER5-TCbBBsRLWTcqk-yv7DftHhRfY_SnP3qPbhjhdtEYnNDf182HZtpS-LCM-DZsfa1rov7N2ZsSUDYTGohhab7n3eIEG-vJ7fQqvtFh3fnkSEsoRlJ4WR7r-zdW6fLqI4ATjcu2K3-cjLUKx4WMUks0jKRMexYezBx6lBBeaE3P75rlFzUTS5RoagCjcV3NZKKyvPD4mk-CY8IT-sb4Scdxte-uyF7MVFqV87mzExG83hBQbFSTZVlpwHx3j7ofKGShn8CR8jmK3JJk3856Pz-WnvLv5BKeRCiiHHHNVDFtgMsGJ9MkwqRY2jGMFWyotTpYLJhu4HS2ms-wuqNXvevLVcnwwyBda3Y0q3VJmOj3GfQ_2Y5nITBteYusg10oMfeYWbd0Ta11Kngwndnb3INWu7UrFGkVUIA1flMCubj2agHuNHPQO3RKOieJ8rh9H7RHm7db0mLzjoH1vsHFwV2fm02XrEpRdQ4bbyOH7QCB1eHsGsW-XABNG5-otdlpCjUVhSwRNZIEBON7FOpL8QtydgwHuzEZqo9oVbCLqLQvFkurBCcoFyLDVx3sqvT9p-kkeegxB4xIhIM4R9_w7ZfDpQy8DjA6w6MjFrYe53zX1KHeILoWu6ZBvcCLjF-BsK5AY6MqDIGr94F7VE5uJ2WPvLEYpmT5dY4HS2fqiJugfje0WuXoVmohtmvyWfC1X5AHUd0CJHbUTaL6033VVOl9_O9gM0YEDDvdzjUCRHzMtu3G00)
----
 
 The database is built using MongoDB with the following key collections:
 1. **Users:**
