@@ -63,36 +63,185 @@ The platform will consist of a responsive web application and mobile apps for iO
 - Content must adhere to copyright laws and DMCA regulations.
 
 
+**Functional Requirements**
 
-# Functional Requirements
+---
 
-## 3.1 User Registration and Authentication
-- **FR-1**: Users can register via email or through third-party services like Google, Facebook, or LinkedIn.
-- **FR-2**: Users can log in and out, recover passwords, and manage profile settings.
-- **FR-3**: Two-factor authentication (2FA) is available for account security.
-- **FR-4**: Users can deactivate or delete their accounts.
+### **Use Case 1: User Registration and Login**  
+**Actors**: User  
+**Goal**: Allow users to create accounts or log in using email and third-party services (Google, Facebook, LinkedIn).  
+**Precondition**: User provides valid credentials.  
+**Postcondition**: User gains access to the platform.  
+**Main Flow**:  
+1. User chooses to register or log in.  
+2. User provides credentials (email/password or third-party login).  
+3. System validates credentials.  
+4. If valid, the user is redirected to the dashboard.  
 
-## 3.2 Profile Management
-- **FR-5**: Users can update their profiles, including personal information, experience, education, certifications, and skills.
-- **FR-6**: Profile visibility settings allow users to make profiles public, private, or visible only to connections.
+**Alternative Flow**:  
+- If credentials are invalid, the system displays an error message.  
+- After five failed attempts, the system temporarily locks the account.  
 
-## 3.3 Job Listings and Application
-- **FR-7**: Companies can create, edit, and delete job postings, including detailed descriptions and skill requirements.
-- **FR-8**: Users can apply for jobs, attaching their resumes and cover letters.
-- **FR-9**: Recruiters can manage and filter applicants based on skills, location, and experience.
+---
 
-## 3.4 Networking and Endorsements
-- **FR-10**: Users can send, accept, and reject connection requests.
-- **FR-11**: Users can endorse the skills of their connections.
-- **FR-12**: The platform will suggest new connections based on the user’s industry and interests.
+### **Use Case 2: Account Verification**  
+**Actors**: User  
+**Goal**: Allow users to verify their account via email or SMS to confirm their identity.  
+**Precondition**: User has successfully registered but has not yet verified the account.  
+**Postcondition**: User’s account is verified and activated.  
+**Main Flow**:  
+1. System sends a verification email or SMS containing a link or code.  
+2. User clicks the link or enters the provided code.  
+3. System validates the code and activates the user account.  
 
-## 3.5 Messaging
-- **FR-13**: Users can send direct messages to their connections, with options to attach documents or links.
-- **FR-14**: Real-time notifications alert users to new messages.
+**Alternative Flow**:  
+- If the verification link or code is expired/invalid, the system prompts the user to request a new code.  
 
-## 3.6 Admin Panel
-- **FR-15**: Admins can manage user roles, view reports on platform activity, and moderate content.
-- **FR-16**: Admins can ban users or remove inappropriate content flagged by the community.
+---
+
+### **Use Case 3: Profile Management**  
+**Actors**: User  
+**Goal**: Allow users to view, update, and manage their personal profile.  
+**Precondition**: User is logged in.  
+**Postcondition**: User’s profile is updated successfully.  
+**Main Flow**:  
+1. User navigates to the profile section.  
+2. User updates personal information, such as experience, education, skills, or visibility settings.  
+3. System validates and saves the changes.  
+
+**Alternative Flow**:  
+- If input is invalid (e.g., missing required fields), the system displays an error message.  
+
+---
+
+### **Use Case 4: Profile Visibility Management**  
+**Actors**: User  
+**Goal**: Allow users to manage the visibility of their profiles.  
+**Precondition**: User is logged in.  
+**Postcondition**: Profile visibility is updated based on user preferences.  
+**Main Flow**:  
+1. User accesses visibility settings in their profile.  
+2. User selects one of the visibility options: Public, Private, or Connections Only.  
+3. System updates profile visibility accordingly.  
+
+---
+
+### **Use Case 5: Job Postings Management**  
+**Actors**: Company Admin  
+**Goal**: Allow companies to create, edit, and manage job postings.  
+**Precondition**: Company admin is logged in.  
+**Postcondition**: Job postings are successfully created or updated.  
+**Main Flow**:  
+1. Company admin navigates to the job posting section.  
+2. Admin provides job details (title, description, skills, location).  
+3. System saves and publishes the job posting.  
+
+**Alternative Flow**:  
+- If required fields are missing, the system prompts the admin to complete the input.  
+
+---
+
+### **Use Case 6: Job Applications**  
+**Actors**: User, Company Admin  
+**Goal**: Allow users to apply for jobs and recruiters to manage applications.  
+**Precondition**: Job postings exist, and the user is logged in.  
+**Postcondition**: Application is submitted and visible to recruiters.  
+**Main Flow**:  
+1. User views a job posting and clicks “Apply.”  
+2. User uploads a resume and cover letter.  
+3. System submits the application to the company’s job management dashboard.  
+4. Recruiters filter and view applicants based on skills, location, and experience.  
+
+**Alternative Flow**:  
+- If required documents are missing, the system prompts the user to upload them.  
+
+---
+
+### **Use Case 7: Skill Endorsements**  
+**Actors**: User  
+**Goal**: Allow users to endorse the skills of their connections.  
+**Precondition**: User is connected to the person they are endorsing.  
+**Postcondition**: Skill endorsement is reflected on the recipient’s profile.  
+**Main Flow**:  
+1. User navigates to a connection’s profile.  
+2. User selects a skill to endorse.  
+3. System records the endorsement.  
+
+---
+
+### **Use Case 8: Messaging System**  
+**Actors**: User  
+**Goal**: Allow users to send direct messages with attachments to their connections.  
+**Precondition**: Users must be connected.  
+**Postcondition**: Message is delivered, and the recipient is notified.  
+**Main Flow**:  
+1. User opens the messaging interface.  
+2. User selects a connection and composes a message.  
+3. User optionally attaches documents or links.  
+4. System sends the message and notifies the recipient in real time.  
+
+**Alternative Flow**:  
+- If the recipient’s inbox is full, the system displays an error message.  
+
+---
+
+### **Use Case 9: Admin Moderation**  
+**Actors**: Admin  
+**Goal**: Allow platform admins to moderate content, manage user roles, and oversee platform activity.  
+**Precondition**: Admin is logged into the platform.  
+**Postcondition**: Moderation actions (e.g., content removal, user bans) are applied.  
+**Main Flow**:  
+1. Admin accesses the moderation dashboard.  
+2. Admin views reports or flagged content.  
+3. Admin takes actions (ban user, remove content, or update roles).  
+
+**Alternative Flow**:  
+- If an action is invalid (e.g., banning a non-existent user), the system displays an error message.  
+
+---
+
+### **Use Case 10: Notifications**  
+**Actors**: User  
+**Goal**: Notify users about key events, such as messages, endorsements, or job activity.  
+**Precondition**: User has activity that triggers a notification.  
+**Postcondition**: User is notified in real time.  
+**Main Flow**:  
+1. System detects a trigger event (e.g., new message, job application update).  
+2. System sends a notification to the user.  
+3. User views notifications in the dashboard.  
+
+---
+
+### **Use Case 11: Password Recovery**  
+**Actors**: User  
+**Goal**: Allow users to recover accounts by resetting their passwords.  
+**Precondition**: User’s email or phone number is valid.  
+**Postcondition**: Password is successfully reset.  
+**Main Flow**:  
+1. User clicks “Forgot Password” on the login screen.  
+2. User enters their registered email or phone number.  
+3. System sends a password reset link or code.  
+4. User follows the link or enters the code to reset the password.  
+
+**Alternative Flow**:  
+- If the email or phone number is unrecognized, the system notifies the user.  
+
+---
+
+### **Use Case 12: Account Deactivation and Deletion**  
+**Actors**: User  
+**Goal**: Allow users to deactivate or permanently delete their accounts.  
+**Precondition**: User is logged in.  
+**Postcondition**: User account is deactivated or removed from the system.  
+**Main Flow**:  
+1. User navigates to account settings.  
+2. User selects “Deactivate” or “Delete Account.”  
+3. System confirms the action and processes the request.  
+
+**Alternative Flow**:  
+- If the user has active job postings or pending applications, the system prompts for resolution before deletion.  
+
+---
 
 # Non-Functional Requirements
 
