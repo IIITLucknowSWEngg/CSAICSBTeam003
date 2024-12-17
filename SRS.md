@@ -246,7 +246,7 @@ The platform will consist of a responsive web application and mobile apps for iO
 # Non-Functional Requirements
 
 ## 4.1 Performance Requirements
-- **NFR-1**: The system should support up to 500,000 concurrent users.
+- **NFR-1**: The system should support a good amount of users
 - **NFR-2**: Job postings and search results should load within 1 second under standard conditions.
 
 ## 4.2 Security Requirements
