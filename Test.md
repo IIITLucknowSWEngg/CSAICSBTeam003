@@ -435,6 +435,161 @@ describe('User Comment on a Post', function() {
 });
 ```
 
+### **Test Case 8: Load Handling for 500,000 Concurrent Users**
+**Scenario**: The system should support up to 500,000 concurrent users.
+
+**Test Steps**:  
+1. Use a load-testing tool like **Apache JMeter**, **k6**, or cloud-based solutions to simulate **500,000 concurrent users**.  
+2. Execute critical workflows:  
+   - User Sign Up.  
+   - Job search and posting.  
+   - Messaging.  
+3. Monitor system performance:  
+   - Measure response times, CPU, memory, and database utilization.  
+4. Verify response times do not degrade beyond acceptable thresholds.  
+
+**Expected Result**:  
+- The system successfully handles 500,000 concurrent users.  
+- Critical workflows (like job search) maintain acceptable response times (< 1 second).  
+
+**Test Code Example using k6**:
+```javascript
+import http from 'k6/http';
+import { check, sleep } from 'k6';
+
+export let options = {
+  stages: [
+    { duration: '5m', target: 500000 }, // Ramp up to 500,000 users
+    { duration: '10m', target: 500000 }, // Sustain for 10 minutes
+    { duration: '2m', target: 0 },      // Ramp down
+  ],
+};
+
+export default function () {
+  let res = http.get('https://linkedin-clone.com/api/job-search?q=developer');
+  
+  // Verify response time
+  check(res, {
+    'Response time is below 1s': (r) => r.timings.duration < 1000,
+    'Status is 200': (r) => r.status === 200,
+  });
+  sleep(1); // Simulate user wait time
+}
+```
+
+---
+
+### **Test Case 9: Job Postings and Search Response Time**
+**Scenario**: Job postings and search results should load within **1 second** under standard conditions.
+
+**Test Steps**:  
+1. Navigate to the job search or posting page.  
+2. Trigger a job search query with a commonly used keyword (e.g., "developer").  
+3. Record the response time of the search results.  
+4. Verify the response time is under 1 second.  
+
+**Expected Result**:  
+The job postings or search results load in **< 1 second**.  
+
+**Test Code Example**:
+```javascript
+describe('Job Search Performance', function() {
+  it('should load job search results within 1 second', async function() {
+    const startTime = Date.now();
+    
+    // Step 2: Trigger job search
+    const response = await jobSearchPage.searchJobs('developer');
+    
+    const duration = Date.now() - startTime;
+
+    // Step 4: Verify response time
+    expect(response.status).to.equal(200);
+    expect(duration).to.be.lessThan(1000); // 1 second
+  });
+});
+```
+
+---
+
+### **Test Case 10: User Session Expiry After Inactivity**
+**Scenario**: User sessions must expire after a period of inactivity for security purposes.
+
+**Test Steps**:  
+1. Log in to the LinkedIn Clone platform.  
+2. Perform some activity to validate the session.  
+3. Remain **inactive for 15 minutes** (or the configured timeout).  
+4. Attempt to perform an action (e.g., navigate to a protected page).  
+5. Verify that the session has expired and the user is redirected to the login page.  
+
+**Expected Result**:  
+- The user session expires after 15 minutes of inactivity.  
+- The user is redirected to the login page when performing further actions.  
+
+**Test Code Example**:
+```javascript
+describe('User Session Expiry', function() {
+  it('should log out the user after 15 minutes of inactivity', function() {
+    loginPage.login('john.doe@example.com', 'password123');
+
+    // Simulate inactivity
+    browser.pause(15 * 60 * 1000); // 15 minutes in milliseconds
+
+    // Attempt to access dashboard
+    dashboardPage.navigate();
+
+    // Verify user is redirected to login page
+    expect(loginPage.isDisplayed()).to.be.true;
+    expect(loginPage.getMessage()).to.include('Your session has expired. Please log in again.');
+  });
+});
+```
+
+---
+
+### **Test Case 11: GDPR Compliance - Right to be Forgotten**
+**Scenario**: Ensure GDPR compliance by allowing users to delete their data.
+
+**Test Steps**:  
+1. Log in to the LinkedIn Clone platform.  
+2. Navigate to the **Profile Settings** page.  
+3. Request data deletion (e.g., "Delete My Account").  
+4. Confirm the deletion request via email/OTP verification.  
+5. Verify the account and all associated data are deleted from the system.  
+6. Attempt to log in with the deleted account credentials.  
+7. Verify login fails and account no longer exists.  
+
+**Expected Result**:  
+- User can request and confirm account deletion.  
+- All personal data is permanently removed.  
+- Login attempts with deleted credentials fail.  
+
+**Test Code Example**:
+```javascript
+describe('GDPR Compliance - Right to be Forgotten', function() {
+  it('should allow user to delete their account and data', async function() {
+    profilePage.openSettings();
+    profilePage.requestAccountDeletion();
+
+    // Step 4: Confirm via OTP/email
+    const confirmationCode = emailService.getLatestOTP('john.doe@example.com');
+    profilePage.confirmDeletion(confirmationCode);
+
+    // Verify deletion success
+    expect(profilePage.getSuccessMessage()).to.include('Your account has been deleted');
+
+    // Step 6: Attempt to log in
+    loginPage.login('john.doe@example.com', 'password123');
+
+    // Verify login fails
+    expect(loginPage.getErrorMessage()).to.include('Account not found');
+  });
+});
+```
+
+---
+
+These test cases ensure the **performance**, **security**, and **compliance** aspects of the LinkedIn Clone application are validated effectively.
+
 ---
 
 ## Test Deliverables for LinkedIn Clone
